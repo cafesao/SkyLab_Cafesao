@@ -1,0 +1,5 @@
+let divP = document.querySelector('#divP')
+let elementoP = document.createElement('p')
+let fraseP = document.createTextNode('Ola Mundo!')
+elementoP.appendChild(fraseP)
+divP.appendChild(elementoP)
