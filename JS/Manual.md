@@ -33,9 +33,10 @@ function somar (a, b) {return a + b}
 
 1. Não devemos passar vários *parâmetros* para uma função, isso deixa feio e é “anti-clencode”.
 2. Não devemos chamar uma função dentro da outra, pelos mesmos motivos.
-3. A função só deve fazer uma coisa, e deve fazer isso bem feito:
+3. A função só deve fazer uma coisa, e deve fazer isso bem feito: </br>
    :small_blue_diamond: **Exemplo:** Uma função que soma dois números é melhor que uma função que soma, subtrai, divide, multiplica e etc.
-4. A função deve ser escrita em letras minúsculas, mas quando tem duas palavras, a primeira letra da primeira palavra deve ser minúsculo, mas a primeira letra das próximas palavras devem ser em maiúsculo, **exemplo:** *limparTela* ou *somarNumerosRomanos*.
+4. A função deve ser escrita em letras minúsculas, mas quando tem duas palavras, a primeira letra da primeira palavra deve ser minúsculo, mas a primeira letra das próximas palavras devem ser em maiúsculo. </br>
+   :small_blue_diamond: **Exemplo:** *limparTela* ou *somarNumerosRomanos*.
 5. A função quase sempre precisa de um `return` seja ele vazio ou com algo.
 
 <div id='If-else-e-else-if'></div>
@@ -55,9 +56,9 @@ if(nota == 10) {
 
 :arrow_forward: O **if** serve para verificar a condição, se algo é verdadeiro ou falso, esta condição esta dentro dos `()`, a condição e simples, você faz uma pergunta, se a resposta for verdadeiro, o codigo de dentro deste `if` e executado, se não, continua o programa e ignora o codigo dentro.
 
-1. O if pode vir acompanhado com seus amigos o `else {}` e o `else if() {}`: </br>
-:small_orange_diamond: **else** Serve para que quando for falso ele executa, else signfica se não, então, caso a condição do if for falsa, caso exista um else, ele vai ser executado. </br>
-:small_orange_diamond: **else if** Tem quase o mesmo objetivo do `else`, so e executado quando o `if` e falso, mas o `else if`, faz uma nova analize na condição, e como se você junstasse o `if` e o `else`, ele so **executa** caso o if seja **falso**, se for, ele faz uma nova analise da condição.
+1. Pode vir acompanhado com seus amigos o `else {}` e o `else if() {}`: </br>
+:small_orange_diamond: **else** Serve para que quando for falso ele executa, `else` signfica se não, então, caso a condição do `if` for falsa, caso exista um `else`, ele vai ser executado. </br>
+:small_orange_diamond: **else if** Tem quase o mesmo objetivo do `else`, so e executado quando o `if` e falso, mas o `else if`, faz uma nova analize na condição, e como se você junstasse o `if` e o `else`, ele so **executa** caso o `if` seja **falso**, se for, ele faz uma nova analise da condição.
 1. O `else if`, pode ter seus proprios `else`.
 2. Existe varios simbolos que é utilizado para examinar se algo e verdadeiro ou falso, alguns mais utilizados:  
    </br>
@@ -69,7 +70,7 @@ if(nota == 10) {
    :small_blue_diamond: Maior que ou igual (`>=`) </br>
    :small_blue_diamond: Menor que (`<`) </br>
    :small_blue_diamond: Menor que ou igual (`<=`) </br> </br>
-   :small_blue_diamond: E os **booleanos:*`* </br>
+   :small_blue_diamond: E os **booleanos:** </br>
    :small_blue_diamond: AND (&) (`E`) </br>
    :small_blue_diamond: OR (|) (`OU`) </br>
    :small_blue_diamond: XOR (^) (`OU Exclusivo`) </br>
@@ -84,7 +85,9 @@ for (*Elemento*; *Comparação*; *adição ou subtração*) {}
 
 ### Exemplo:
 ```javascript
-for(let c = 2; c > 0; c--) { console.log(Café e bom!) }
+for(let c = 2; c > 0; c--) { 
+    console.log(Café e bom!) 
+}
 ```
 
 :arrow_forward: E uma repetição com um numero limite de vezes, serve mais quando você sabe quantas vezes tem que repetir aquilo.
@@ -154,7 +157,7 @@ const Gostoso = 'Gostoso'
 const Cafe = {nome: "Cafe importado", tipo: "Cafe importado de algum lugar", nota: 8.5}
 ```
 
-Podemos mudar a *Propriedades* mas **NÃO** o *Parâmetros* desta forma: 
+Podemos mudar a *Propriedades* mas **NÃO** os *Parâmetros* desta forma: 
 ```javascript
 Cafe.nome = “Cafe Brasileiro”
 ```
@@ -187,7 +190,7 @@ document.createTextNode()
 let aTexto = document.createTextNode(BatataFrita)
 ```
 
-:arrow_forward: Cria uma palavra, frase ou texto, que depois deve ser acoplado em um elemento `<p>`, `<li>`, `<a>` ... 
+:arrow_forward: Cria uma palavra, frase ou texto, que depois deve ser acoplado em um elemento `<p>`, `<li>`, `<a>` ... </br>
 Deve ser acompanhado de uma **variavel**.
 
 <div id='setAttribute'></div>
@@ -218,7 +221,7 @@ aElemento.setAttribute('href', 'http://batatafrita.com.br')
 aElemento.appendChild(aTexto)
 ```
 
-:arrow_forward: Ele serve para você juntar uma coisa na outra, o primeiro e pai do segundo parametro, ou seja, no exemplo, `aTexto` e **filho** de `aElemento`.
+:arrow_forward: Ele serve para você juntar uma coisa na outra, o primeiro e pai do segundo parametro, ou seja, no exemplo, `aTexto` é **filho** de `aElemento`.
 
 <div id='innerHTML'></div>
 
@@ -249,7 +252,7 @@ inputUser = document.querySelector('input#usuario')
 ```
 
 :arrow_forward: Ele coloca o conteudo de algo do arquivo HTML para dentro de uma variavel, o **querySelector** e uma forma nova de selecionar os ID,Class,Elementos...
-1. Dentro do `('')` ele usa a mesma sintaxe do CSS, então no exemplo, colocando `'input#usuario'` você seleciona o `<input>` com o `<id>` usuario.
+1. Dentro do `('')` ele usa a mesma sintaxe do CSS, então no exemplo, colocando `'input#usuario'` você seleciona o `<input>` com o `<id='usuario'>`.
 2. Também pode selecionar apenas o `id`, não importando se for `<input>`, `<div>`, `<p>`..., mas não aconselho, e melhor colocar o caminho.
 
 <div id='Length'></div>
@@ -275,7 +278,7 @@ nota.value
 
 :arrow_forward: Vamos por partes: </br>
 :small_orange_diamond: **length** Serve para retornar o tamanho de algo, seja dos caracteres de uma frase ou o tamanho de uma lista ou algo do tipo. </br>
-:small_orange_diamond: **value** Retorna um `Number` em vez de uma string, isso e util quando queremos o conteudo de um `<input>` ou algo assim, ele invez de retornar uma `string` contendo o numero, com o **value**, ele retorna o valor de dentro desta `string`.
+:small_orange_diamond: **value** Retorna um `Number` em vez de uma string, isso e util quando queremos o conteudo de um `<input>` ou algo assim, ele invés de retornar uma `string` contendo o numero, com o **value**, ele retorna o valor de dentro desta `string`.
 
 <div id='Arrow'></div>
 
@@ -300,7 +303,7 @@ CriarPessoa((idade) => {
 })
 ```
 
-:arrow_forward: As queridas **arrow functions** funcionam da mesma forma que você colocar `function()`, algumas **funções** + **metodos**, pedem uma função anonima, e em vez, de você colocar `function()`, você deve colocar `() => {}`.
+:arrow_forward: As queridas **arrow functions** funcionam da mesma forma que você colocar `function()`, algumas **funções** + **metodos**, pedem uma função anonima, e em vez de, você colocar `function()`, você deve colocar `() => {}`.
 1. Esse tipo, e dividido da seguinte maneira: </br>
 :small_orange_diamond: `()` Esta parte recebe os parametros, igual na função anonima. </br>
 :small_orange_diamond: `=>` O simbolo de igual + simbolo de maior, chama a função anonima, da mesma forma que se fizesse `function()` </br>
