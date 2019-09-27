@@ -1,4 +1,4 @@
-<h1 align=`center`> Manual de algumas coisas do JS :star:</h1>
+<h1 align='center'> Manual de algumas coisas do JS :star:</h1>
 
 ## **Tabela de conteudo**
 1. [Função](#Function)
@@ -50,7 +50,7 @@ if(parametro ? parametro) {}
 ### Exemplo:
 ```javascript
 if(nota == 10) {
-notaExplicação = `M A R A V I L H O S O`
+notaExplicação = 'M A R A V I L H O S O'
 }
 ```
 
@@ -60,8 +60,7 @@ notaExplicação = `M A R A V I L H O S O`
 :small_orange_diamond: **else** Serve para que quando for falso ele executa, `else` significa se não, então, caso a condição do `if` for falsa, caso exista um `else`, ele vai ser executado. </br>
 :small_orange_diamond: **else if** Tem quase o mesmo objetivo do `else`, só e executado quando o `if` e falso, mas o `else if`, faz uma nova analise na condição, e como se você junstasse o `if` e o `else`, ele so **executa** caso o `if` seja **falso**, se for, ele faz uma nova analise da condição.
 1. O `else if`, pode ter seus próprios `else`.
-2. Existe vários símbolos que é utilizado para examinar se algo e verdadeiro ou falso, alguns mais utilizados:
-</br>
+2. Existe vários símbolos que é utilizado para examinar se algo e verdadeiro ou falso, alguns mais utilizados:</br>
 :small_blue_diamond: Igual (`==`) </br>
 :small_blue_diamond: Não igual (`!=`) </br>
 :small_blue_diamond: Estritamente igual (`===`) </br>
@@ -70,7 +69,7 @@ notaExplicação = `M A R A V I L H O S O`
 :small_blue_diamond: Maior que ou igual (`>=`) </br>
 :small_blue_diamond: Menor que (`<`) </br>
 :small_blue_diamond: Menor que ou igual (`<=`) </br> </br>
-:small_blue_diamond: E os **booleanos:** </br>
+:small_blue_diamond: E os **booleanos** </br>
 :small_blue_diamond: AND (&) (`E`) </br>
 :small_blue_diamond: OR (|) (`OU`) </br>
 :small_blue_diamond: XOR (^) (`OU Exclusivo`) </br>
@@ -344,9 +343,9 @@ console.log('Erro 404 - Não existe este USER')
 })
 ```
 
-:arrow_forward: O axios e uma forma de eviar as **Promise**, o axios agiliza isso de forma rápida e menos verbosa, isso torna o desenvolvimento muito mais **rápido**, existe varias formas e vários métodos, como o `.get`, `.push` e etc.
-1. O axios, acompanha um **metodo** + *parâmetro* (Quase sempre uma URL), junto temos o:
-:small_orange_diamond: **.then** Caso tudo ocorra como o esperado a url retorne algo valido.
-:small_orange_diamond: **.catch** Se algo der errado, retorna um erro, igual nas Promise.
-1. O **.then** e o **.catch** precisam de uma função anonima(as `function()`), mas, conforme o ES6, você pode usar um *Arrow functions* `(*Parâmetro*) => {**Código**}`.
+:arrow_forward: O axios e uma forma de eviar as **Promise**, o axios agiliza isso de forma rápida e menos verbosa, isso torna o desenvolvimento muito mais **rápido**, existe varias formas e vários métodos, como o `.get`, `.push` e etc. </br>
+1. O axios, acompanha um **metodo** + *parâmetro* (Quase sempre uma URL), junto temos o: </br>
+:small_orange_diamond: **.then** Caso tudo ocorra como o esperado a url retorne algo valido. </br>
+:small_orange_diamond: **.catch** Se algo der errado, retorna um erro, igual nas Promise. </br>
+2. O **.then** e o **.catch** precisam de uma função anonima(as `function()`), mas, conforme o ES6, você pode usar um *Arrow functions* `(*Parâmetro*) => {**Código**}`.
 
