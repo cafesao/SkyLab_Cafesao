@@ -26,7 +26,9 @@ function NomeDaFunção (parametro) {}
 
 ### Exemplo:
 ```javascript
-function somar (a, b) {return a + b}
+function somar (a, b) {
+    return a + b
+}
 ```
 
 :arrow_forward: A **function** serve para você criar uma função, uma função nada mais é que um conjunto de código que quando chamado deve fazer algo.
