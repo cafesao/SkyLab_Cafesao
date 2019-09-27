@@ -17,12 +17,12 @@
 
 ## Function
 ### Original: 
-``` 
+```javascript
 function NomeDaFunção (parametro) {} 
 ```
 
 ### Exemplo:
-```
+```javascript
 function somar (a, b) {return a + b}
 ```
 
@@ -37,12 +37,12 @@ A **function** serve para você criar uma função, uma função nada mais é qu
 
 ## If, else e else if
 ### Original:
-```
+```javascript
 if(parametro ? parametro) {}
 ```
 
 ### Exemplo:
-```
+```javascript
 if(nota == 10) {notaExplicação = 'M A R A V I L H O S O'}
 ```
 
@@ -69,12 +69,12 @@ O **if** serve para verificar a condição, se algo e verdadeiro ou falso, esta 
 
 ## For
 ### Original:
-```
+```javascript
 for (*Elemento*; *Comparação*; *adição ou subtração*) {}
 ```
 
 ### Exemplo:
-```
+```javascript
 for(let c = 2; c > 0; c--) { console.log(Café e bom!) }
 ```
 
@@ -88,7 +88,7 @@ Ele tem três partes, pegando do exemplo:
 
 ## While, Do while
 ### Original:
-```
+```javascript
 while (*comparação*) {}
 
 ou
@@ -97,7 +97,7 @@ do {} while (*comparação*)
 ```
 
 ### Exemplo:
-```
+```javascript
 while(a == 0) {
     let a = 2
     console.log(a)
@@ -120,13 +120,13 @@ São estruturas de repetição, com o mesmo objetivo do for, repetir um trecho d
 
 ## Var, Let ou Const
 ### Original:
-```
+```javascript
 var Nome = Algo 
 let Nome = Algo
 const Nome = Algo
 ```
 ### Exemplo:
-```
+```javascript
 var Batata = 'Batata'
 let Frita = 'Frita'
 const Gostoso = 'Gostoso'
@@ -138,24 +138,24 @@ Vamos separar e ver cada um: <br/>
 **let** = Let nada mais é que uma variavel, mas o diferencial dela e que ela só existe dentro do 	escopo onde foi chamada, por exemplo, dentro de uma função, ela so vai existir dentro desse escopo.<br/>
 **const** = Constante, e algo que é sempre assim, não pode ser mudada, e imutável, diferente do var e do let, ela e interessante para definir o PI ou para criar objetos, tem uma curiosidade, você não pode mudar o nome do objeto e nem suas propriedades, mas pode mudar o conteúdo destas propriedades, **exemplo**: 
 
-```
+```javascript
 const Cafe = {nome: "Cafe importado", tipo: "Cafe importado de algum lugar", nota: 8.5}
 ```
 
 Podemos mudar a *Propriedades* mas **NÃO** o *Parâmetros* desta forma: 
-```
+```javascript
 Cafe.nome = “Cafe Brasileiro”
 ```
 
 
 ## createElement (Elemento)
 ### Original:
-```
+```javascript
 document.createElement()
 ```
 
 ### Exemplo:
-```
+```javascript
 let aElemento = document.createElement(a)
 ```
 
@@ -164,12 +164,12 @@ Cria um elemento, igual você cria no html, so que via JS, ele pode ser um p, li
 
 ## createTextNode (Texto *ou* 'Texto')
 ### Original:
-```
+```javascript
 document.createTextNode()
 ```
 
 ### Exemplo:
-```
+```javascript
 let aTexto = document.createTextNode(BatataFrita)
 ```
 
@@ -179,13 +179,13 @@ Deve ser acompanhado de uma **variavel**
 
 ## *Elemento*.setAttribute ('Atributo', Algo)
 ### Original:
-```
+```javascript
 ***.setAttribute()
 ```
 
 ### Exemplo:
-```
-aElemento.setAttribute('href', http://batatafrita.com.br)
+```javascript
+aElemento.setAttribute('href', 'http://batatafrita.com.br')
 ```
 
 Você adiciona um atributo dentro de um elemento, um atributo tipo ID, Class e etc, e um elemento como p, li, a...
@@ -193,12 +193,12 @@ Você adiciona um atributo dentro de um elemento, um atributo tipo ID, Class e e
 
 ## *Elemento*.appendChild (Elemento)
 ### Original:
-```
+```javascript
 ***.appendChild(***)
 ```
 
 ### Exemplo:
-```
+```javascript
 aElemento.appendChild(aTexto)
 ```
 
@@ -207,12 +207,12 @@ Ele serve para você juntar uma coisa na outra, o primeiro e pai do segundo para
 
 ##  *Elemento*.innerHTML ('')
 ### Original:
-```
+```javascript
 ***.innerHTML()
 ```
 
 ### Exemplo:
-```
+```javascript
 aElemento.innerHTML('Prefiço cafe') ou ('')
 ```
 
@@ -221,12 +221,12 @@ Serve para escrever com e sobre o html, ou seja, se você quiser pode escrever t
 
 ## document.querySelector('')
 ### Original:
-```
+```javascript
 *elemento* = document.querySelector('')
 ```
 
 ### Exemplo:
-```
+```javascript
 inputUser = document.querySelector('input#usuario')
 ```
 
@@ -237,14 +237,14 @@ Ele coloca o conteudo de algo do arquivo HTML para dentro de uma variavel, o **q
 
 ## Length e Value
 ### Original:
-```
+```javascript
 ***.length
 ou
 ***.value
 ```
 
 ### Exemplo:
-```
+```javascript
 let batata = 'Batata é bom'
 batata.length
 
