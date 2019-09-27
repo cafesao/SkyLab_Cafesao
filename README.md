@@ -5,7 +5,7 @@
 Ola, meu nome é Gabriel, apelido **Cafesão**.
 Sou apenas um cara que **ama programar** :computer: , e gosta de desafios, e isso e algo diferente, este e meu aprendizado em JS, ES6, Node.JS e React, é simplesmente um pouco do que aprendi ao longo deste ano.
 
-> Sinceramente, valeu Rocketseat
+> Sinceramente, valeu Rocketseat!!
 
 ### Por quê te ajudaram a ser quem você é :question:
 
@@ -15,19 +15,19 @@ Muito simples, eu precisava aprender toda essa bagagem em um tempo curto, com fo
 
 > Calma meu querido, keep calm… keep calm! :v:
 
-O Google patrocinou um curso de JS básico pelo canal do **Curso em Video**, que tem um professor maravilhoso o querido **Gustavo Guanabara**, que me ajudou e me ensinou tudo o que sei, se não fosse ele, provavelmente hoje **eu não seria programador**...valeu cara, tamo junto!
-Enfim, com um curso gratuito e com uma qualidade excepcional, meti a cara, não foi difícil, como eu disse, já sou programador, então não tive dificuldades para entender os conceitos, como "O que é uma função?" ou "O que é uma variável?" então isso foi de boas.
-Consegui adquirir muito coisa e disse que JavaScript era meu foco, e fui procurar desde cursos gratuitos até cursos pagos, foi quando achei a **Rocketseat**, com a plataforma da SkyLab que tem um curso **GRATUITO** de JS, ES6, NodeJS e React, eu fiquei **MEU DEUS, ACHEI O QUE EU QUERIA, UHUUU!**
+O Google patrocinou um curso de JS básico pelo canal do **Curso em Video**, que tem um professor maravilhoso o querido **Gustavo Guanabara**, que me ajudou e me ensinou tudo o que sei, se não fosse ele, provavelmente hoje **eu não seria programador**...valeu cara, tamo junto! </br>
+Enfim, com um curso gratuito e com uma qualidade excepcional, meti a cara, não foi difícil, como eu disse, já sou programador, então não tive dificuldades para entender os conceitos, como *"O que é uma função?"* ou *"O que é uma variável?"* então isso foi de boas.</br>
+Consegui adquirir muito coisa e disse que JavaScript era meu foco, e fui procurar desde cursos gratuitos até cursos pagos, foi quando achei a **Rocketseat**, com a plataforma da SkyLab que tem um curso **GRATUITO** de JS, ES6, Node.JS e React, eu fiquei **MEU DEUS, ACHEI O QUE EU QUERIA, UHUUU!** </br>
 E foi assim que tudo começou!
 
 > GRAAAAAAANDE DIA! :star:
 
 ### Enfim... :smiley:
 
-Esses são projetos e tudo mais do que aprendi e como apliquei eles, tem bastante coisa, mas nenhuma novidade para quem sabe já programar em JS, Node e etc, então ta mais para um Backup publico dos meus code, e é isso.
+Esses são projetos e tudo mais do que aprendi e como apliquei eles, tem bastante coisa, mas nenhuma novidade para quem sabe já programar em JS, Node.JS e etc, então ta mais para um Backup publico dos meus code, e é isso. </br>
 Aproveite!
 
-OBS: Para quem quiser usar esses arquivos, precisa ter instalado o Docker e o Yarn.
+OBS: Para quem quiser usar esses arquivos, precisa ter instalado o Docker e o Yarn. </br>
 No Docker precisa criar uma img do MongoDB e no Yarn precisa apenas acessas a pasta do projeto raiz e dar um comando:
 ```
 npm install
