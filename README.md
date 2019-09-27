@@ -1,13 +1,13 @@
-# SkyLab e a grande ajuda! #
+# SkyLab e a grande ajuda! # :heart:
 
-### Quem é esse tal de Cafesão? :sleeping:
+### Quem é esse tal de Cafesão :question:
 
 Ola, meu nome é Gabriel, apelido **Cafesão**.
 Sou apenas um cara que **ama programar** :computer: , e gosta de desafios, e isso e algo diferente, este e meu aprendizado em JS, ES6, NodeJS e React, e simplesmente um pouco do que aprendi ao longo deste ano.
 
 > Sinceramente, valeu Rocketseat
 
-### Por quê te ajudaram a ser quem você é? :sleepy:
+### Por quê te ajudaram a ser quem você é :question:
 
 Muito simples, eu precisava aprender toda essa bagagem em um tempo curto, com foco total, mas que fosse fácil de entender, e aquilo, **sou programador**, ja tinha uma bagagem de conhecimento, **MAS**, precisava de mais, e claro, quando eu vi o JavaScript eu pensei… nhe, deixa isso quieto,não deve ser nada, mas ai...
 
