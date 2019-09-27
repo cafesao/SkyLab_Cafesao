@@ -1,4 +1,4 @@
-# Manual de algumas coisas do JS
+<h1  align='center'> Manual de algumas coisas do JS :star:</h1>
 
 ## **Tabela de conteudo**
 1. [Função](#function)
@@ -15,7 +15,7 @@
 12. [Length e Value](#length-e-value)
 
 
-## Function
+## :heavy_check_mark: Function
 ### Original: 
 ```javascript
 function NomeDaFunção (parametro) {} 
@@ -26,16 +26,15 @@ function NomeDaFunção (parametro) {}
 function somar (a, b) {return a + b}
 ```
 
-A **function** serve para você criar uma função, uma função nada mais é que um conjunto de código que quando chamado deve fazer algo
+:arrow_forward: A **function** serve para você criar uma função, uma função nada mais é que um conjunto de código que quando chamado deve fazer algo.
 
 1. Não devemos passar vários *parâmetros* para uma função, isso deixa feio e é “anti-clencode”.
 2. Não devemos chamar uma função dentro da outra, pelos mesmos motivos.
 3. A função só deve fazer uma coisa, e deve fazer isso bem feito, **exemplo:** Uma função que soma dois números é melhor que uma função que soma, subtrai, divide, multiplica e etc.
-4. A função deve ser escrita em letras minúsculas, mas quando tem duas palavras, a primeira letra da primeira palavra deve ser minúsculo, mas a primeira letra das próximas palavras devem ser em maiúsculo, **exemplo:** *limparTela* ou *somarNumerosRomanos*
+4. A função deve ser escrita em letras minúsculas, mas quando tem duas palavras, a primeira letra da primeira palavra deve ser minúsculo, mas a primeira letra das próximas palavras devem ser em maiúsculo, **exemplo:** *limparTela* ou *somarNumerosRomanos*.
 5. A função quase sempre precisa de um return seja ele vazio ou com algo.
-6. 
 
-## If, else e else if
+## :heavy_check_mark: If, else e else if
 ### Original:
 ```javascript
 if(parametro ? parametro) {}
@@ -46,28 +45,28 @@ if(parametro ? parametro) {}
 if(nota == 10) {notaExplicação = 'M A R A V I L H O S O'}
 ```
 
-O **if** serve para verificar a condição, se algo e verdadeiro ou falso, esta condição esta dentro dos (), a condição e simples, você faz uma pergunta, se a resposta for verdadeiro, o codigo de dentro deste if e executado, se não, continua o programa e ignora o codigo dentro.
+:arrow_forward: O **if** serve para verificar a condição, se algo e verdadeiro ou falso, esta condição esta dentro dos (), a condição e simples, você faz uma pergunta, se a resposta for verdadeiro, o codigo de dentro deste if e executado, se não, continua o programa e ignora o codigo dentro.
 
 1. O if pode vir acompanhado com seus amigos o else{} e o else if() {}: </br>
 **else** = Serve para que quando for falso ele executa, else signfica se não, então, caso a condição do if for falsa, caso exista um else, ele vai ser executado.
 **else if** = O else if tem quase o mesmo objetivo do else, so e executado quando o if e falso, mas o else if, faz uma novo exame em uma condição, e como se você junstasse o if e o else, ele so **executa** caso o if seja **falso**, se for, ele faz uma nova analise da condição.
 2. O else if, pode ter seus proprios else.
 3. Existe varios simbolos que é utilizado para examinar se algo e verdadeiro ou falso, alguns mais utilizados:
-   Igual (==) </br>
-   Não igual (!=) </br>
-   Estritamente igual (===) </br>
-   Estritamente não igual (!==) </br>
-   Maior que (>) </br>
-   Maior que ou igual (>=) </br>
-   Menor que (<) </br>
-   Menor que ou igual (<=) </br>
-   E os **booleanos:** </br>
-   AND (&) (E) </br>
-   OR (|) (OU) </br>
-   XOR (^) (OU Exclusivo) </br>
+   :small_blue_diamond: Igual (==) </br>
+   :small_blue_diamond: Não igual (!=) </br>
+   :small_blue_diamond: Estritamente igual (===) </br>
+   :small_blue_diamond: Estritamente não igual (!==) </br>
+   :small_blue_diamond: Maior que (>) </br>
+   :small_blue_diamond: Maior que ou igual (>=) </br>
+   :small_blue_diamond: Menor que (<) </br>
+   :small_blue_diamond: Menor que ou igual (<=) </br>
+   :small_blue_diamond: E os **booleanos:** </br>
+   :small_blue_diamond: AND (&) (E) </br>
+   :small_blue_diamond: OR (|) (OU) </br>
+   :small_blue_diamond: XOR (^) (OU Exclusivo) </br>
 
 
-## For
+## :heavy_check_mark: For
 ### Original:
 ```javascript
 for (*Elemento*; *Comparação*; *adição ou subtração*) {}
@@ -78,7 +77,7 @@ for (*Elemento*; *Comparação*; *adição ou subtração*) {}
 for(let c = 2; c > 0; c--) { console.log(Café e bom!) }
 ```
 
-E uma repetição com um numero limite de vezes, serve mais quando você sabe quantas vezes tem que repetir aquilo.
+:arrow_forward: E uma repetição com um numero limite de vezes, serve mais quando você sabe quantas vezes tem que repetir aquilo.
 Ele tem três partes, pegando do exemplo:
 **let c = 2** = A primeira parte você diz qual variavel você quer que ele fique examinando, pode declarar a variavel direto no for, ele ira declarar apenas uma vez, sem problemas. </br>
 **c > 0** = A segunda parte e a condição, ele ira examinar esta condição, se for verdadeiro ele continua, se for falsa ele sai da repetição. </br>
@@ -86,7 +85,7 @@ Ele tem três partes, pegando do exemplo:
 1. O for so deve ser usado quando sabemos quantas vezes ele se repete, se não soubermos, devemos usar o while que veremos em breve.
 
 
-## While, Do while
+## :heavy_check_mark: While, Do while
 ### Original:
 ```javascript
 while (*comparação*) {}
@@ -113,12 +112,12 @@ do {
 } while(a == 0)
 ```
 
-São estruturas de repetição, com o mesmo objetivo do for, repetir um trecho de codigo, mas o while e o do while tem uma pecularidade, eles podem repetir indefinidamente até que a condição seja satisfeita (Ou seja se torne falsa), isso e muito util, para repetir procedimentos que não sabemos quantas vezes precisa
+:arrow_forward: São estruturas de repetição, com o mesmo objetivo do for, repetir um trecho de codigo, mas o while e o do while tem uma pecularidade, eles podem repetir indefinidamente até que a condição seja satisfeita (Ou seja se torne falsa), isso e muito util, para repetir procedimentos que não sabemos quantas vezes precisa
 1. **PRECISAMOS** que a condição seja possivel, caso ele nunca seja possivel, ele nunca ira parar, e ira virar um loop infinito.
 2. O **while** verifica a condição no começo e executa o codigo, ja o **do while**, executa o codigo e depois verificado a condição.
    
 
-## Var, Let ou Const
+## :heavy_check_mark: Var, Let ou Const
 ### Original:
 ```javascript
 var Nome = Algo 
@@ -133,7 +132,7 @@ const Gostoso = 'Gostoso'
 ```
 
 
-Vamos separar e ver cada um: <br/>
+:arrow_forward: Vamos separar e ver cada um: <br/>
 **var** = Variáveis e simplesmente qualquer coisa, ela existe em todo o escopo do código não importando onde ela e criada, sendo assim e muito útil fora de uma função e etc.<br/>
 **let** = Let nada mais é que uma variavel, mas o diferencial dela e que ela só existe dentro do 	escopo onde foi chamada, por exemplo, dentro de uma função, ela so vai existir dentro desse escopo.<br/>
 **const** = Constante, e algo que é sempre assim, não pode ser mudada, e imutável, diferente do var e do let, ela e interessante para definir o PI ou para criar objetos, tem uma curiosidade, você não pode mudar o nome do objeto e nem suas propriedades, mas pode mudar o conteúdo destas propriedades, **exemplo**: 
@@ -148,7 +147,7 @@ Cafe.nome = “Cafe Brasileiro”
 ```
 
 
-## createElement (Elemento)
+## :heavy_check_mark: createElement (Elemento)
 ### Original:
 ```javascript
 document.createElement()
@@ -159,10 +158,10 @@ document.createElement()
 let aElemento = document.createElement(a)
 ```
 
-Cria um elemento, igual você cria no html, so que via JS, ele pode ser um p, li, a, ... 
+:arrow_forward: Cria um elemento, igual você cria no html, so que via JS, ele pode ser um p, li, a, ... 
 
 
-## createTextNode (Texto *ou* 'Texto')
+## :heavy_check_mark: createTextNode (Texto *ou* 'Texto')
 ### Original:
 ```javascript
 document.createTextNode()
@@ -173,11 +172,11 @@ document.createTextNode()
 let aTexto = document.createTextNode(BatataFrita)
 ```
 
-Cria uma palavra, frase ou texto, que depois deve ser acoplado em um elemento p, li, a, ... 
+:arrow_forward: Cria uma palavra, frase ou texto, que depois deve ser acoplado em um elemento p, li, a, ... 
 Deve ser acompanhado de uma **variavel**
 
 
-## *Elemento*.setAttribute ('Atributo', Algo)
+## :heavy_check_mark: *Elemento*.setAttribute ('Atributo', Algo)
 ### Original:
 ```javascript
 ***.setAttribute()
@@ -188,10 +187,10 @@ Deve ser acompanhado de uma **variavel**
 aElemento.setAttribute('href', 'http://batatafrita.com.br')
 ```
 
-Você adiciona um atributo dentro de um elemento, um atributo tipo ID, Class e etc, e um elemento como p, li, a...
+:arrow_forward: Você adiciona um atributo dentro de um elemento, um atributo tipo ID, Class e etc, e um elemento como p, li, a...
 
 
-## *Elemento*.appendChild (Elemento)
+## :heavy_check_mark: *Elemento*.appendChild (Elemento)
 ### Original:
 ```javascript
 ***.appendChild(***)
@@ -202,10 +201,10 @@ Você adiciona um atributo dentro de um elemento, um atributo tipo ID, Class e e
 aElemento.appendChild(aTexto)
 ```
 
-Ele serve para você juntar uma coisa na outra, o primeiro e pai do segundo parametro, ou seja, no exemplo, aTexto e **filho** de aElemento.
+:arrow_forward: Ele serve para você juntar uma coisa na outra, o primeiro e pai do segundo parametro, ou seja, no exemplo, aTexto e **filho** de aElemento.
 
 
-##  *Elemento*.innerHTML ('')
+##  :heavy_check_mark: *Elemento*.innerHTML ('')
 ### Original:
 ```javascript
 ***.innerHTML()
@@ -216,10 +215,10 @@ Ele serve para você juntar uma coisa na outra, o primeiro e pai do segundo para
 aElemento.innerHTML('Prefiço cafe') ou ('')
 ```
 
-Serve para escrever com e sobre o html, ou seja, se você quiser pode escrever todo o codigo html com este metodo é mais utilizado para apagar o html.
+:arrow_forward: Serve para escrever com e sobre o html, ou seja, se você quiser pode escrever todo o codigo html com este metodo é mais utilizado para apagar o html.
 
 
-## document.querySelector('')
+## :heavy_check_mark: document.querySelector('')
 ### Original:
 ```javascript
 *elemento* = document.querySelector('')
@@ -230,12 +229,12 @@ Serve para escrever com e sobre o html, ou seja, se você quiser pode escrever t
 inputUser = document.querySelector('input#usuario')
 ```
 
-Ele coloca o conteudo de algo do arquivo HTML para dentro de uma variavel, o **querySelector** e uma forma nova de selecionar os ID,Class,Elementos...
+:arrow_forward: Ele coloca o conteudo de algo do arquivo HTML para dentro de uma variavel, o **querySelector** e uma forma nova de selecionar os ID,Class,Elementos...
 1. Dentro do ('') ele usa a mesma sintaxe do CSS então colocando *'input#usuario'* você seleciona o input com o id usuario.
 2. Também pode selecionar apenas o id, não importando se for input, div, p..., mas não aconselho, e melhor colocar o caminho.
 
 
-## Length e Value
+## :heavy_check_mark: Length e Value
 ### Original:
 ```javascript
 ***.length
@@ -254,7 +253,7 @@ let nota = 6
 nota.value
 ```
 
-Vamos por partes: </br>
+:arrow_forward: Vamos por partes: </br>
 **length** = Serve para retornar o tamanho de algo, seja dos caracteres de uma frase ou o tamanho de uma lista ou algo do tipo. </br>
 **value** = A principal função e retornar um Number em vez de uma string, isso e util quando queremos o conteudo de um Input ou algo assim, ele invez de retornar uma string contendo o numero, com o **value**, ele retorna o valor de dentro desta string.
 
