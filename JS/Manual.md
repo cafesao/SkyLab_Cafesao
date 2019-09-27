@@ -1,4 +1,4 @@
-<h1 align='center'> Manual de algumas coisas do JS :star:</h1>
+<h1 align=`center`> Manual de algumas coisas do JS :star:</h1>
 
 ## **Tabela de conteudo**
 1. [Função](#Function)
@@ -37,7 +37,7 @@ function somar (a, b) {return a + b}
 :small_blue_diamond: **Exemplo:** Uma função que soma dois números é melhor que uma função que soma, subtrai, divide, multiplica e etc.
 4. A função deve ser escrita em letras minúsculas, mas quando tem duas palavras, a primeira letra da primeira palavra deve ser minúsculo, mas a primeira letra das próximas palavras devem ser em maiúsculo. </br>
 :small_blue_diamond: **Exemplo:** *limparTela* ou *somarNumerosRomanos*.
-5. A função quase sempre precisa de um 'return' seja ele vazio ou com algo.
+5. A função quase sempre precisa de um `return` seja ele vazio ou com algo.
 
 <div id='If-else-e-else-if'></div>
 
@@ -50,30 +50,30 @@ if(parametro ? parametro) {}
 ### Exemplo:
 ```javascript
 if(nota == 10) {
-notaExplicação = 'M A R A V I L H O S O'
+notaExplicação = `M A R A V I L H O S O`
 }
 ```
 
-:arrow_forward: O **if** serve para verificar a condição, se algo é verdadeiro ou falso, esta condição esta dentro dos '()', a condição e simples, você faz uma pergunta, se a resposta for verdadeiro, o código de dentro deste 'if' e executado, se não, continua o programa e ignora o código dentro.
+:arrow_forward: O **if** serve para verificar a condição, se algo é verdadeiro ou falso, esta condição esta dentro dos `()`, a condição e simples, você faz uma pergunta, se a resposta for verdadeiro, o código de dentro deste `if` e executado, se não, continua o programa e ignora o código dentro.
 
-1. Pode vir acompanhado com seus amigos o 'else {}' e o 'else if() {}': </br>
-:small_orange_diamond: **else** Serve para que quando for falso ele executa, 'else' significa se não, então, caso a condição do 'if' for falsa, caso exista um 'else', ele vai ser executado. </br>
-:small_orange_diamond: **else if** Tem quase o mesmo objetivo do 'else', só e executado quando o 'if' e falso, mas o 'else if', faz uma nova analise na condição, e como se você junstasse o 'if' e o 'else', ele so **executa** caso o 'if' seja **falso**, se for, ele faz uma nova analise da condição.
-1. O 'else if', pode ter seus próprios 'else'.
+1. Pode vir acompanhado com seus amigos o `else {}` e o `else if() {}`: </br>
+:small_orange_diamond: **else** Serve para que quando for falso ele executa, `else` significa se não, então, caso a condição do `if` for falsa, caso exista um `else`, ele vai ser executado. </br>
+:small_orange_diamond: **else if** Tem quase o mesmo objetivo do `else`, só e executado quando o `if` e falso, mas o `else if`, faz uma nova analise na condição, e como se você junstasse o `if` e o `else`, ele so **executa** caso o `if` seja **falso**, se for, ele faz uma nova analise da condição.
+1. O `else if`, pode ter seus próprios `else`.
 2. Existe vários símbolos que é utilizado para examinar se algo e verdadeiro ou falso, alguns mais utilizados:
 </br>
-:small_blue_diamond: Igual ('==') </br>
-:small_blue_diamond: Não igual ('!=') </br>
-:small_blue_diamond: Estritamente igual ('===') </br>
-:small_blue_diamond: Estritamente não igual ('!==') </br>
-:small_blue_diamond: Maior que ('>') </br>
-:small_blue_diamond: Maior que ou igual ('>=') </br>
-:small_blue_diamond: Menor que ('<') </br>
-:small_blue_diamond: Menor que ou igual ('<=') </br> </br>
+:small_blue_diamond: Igual (`==`) </br>
+:small_blue_diamond: Não igual (`!=`) </br>
+:small_blue_diamond: Estritamente igual (`===`) </br>
+:small_blue_diamond: Estritamente não igual (`!==`) </br>
+:small_blue_diamond: Maior que (`>`) </br>
+:small_blue_diamond: Maior que ou igual (`>=`) </br>
+:small_blue_diamond: Menor que (`<`) </br>
+:small_blue_diamond: Menor que ou igual (`<=`) </br> </br>
 :small_blue_diamond: E os **booleanos:** </br>
-:small_blue_diamond: AND (&) ('E') </br>
-:small_blue_diamond: OR (|) ('OU') </br>
-:small_blue_diamond: XOR (^) ('OU Exclusivo') </br>
+:small_blue_diamond: AND (&) (`E`) </br>
+:small_blue_diamond: OR (|) (`OU`) </br>
+:small_blue_diamond: XOR (^) (`OU Exclusivo`) </br>
 
 <div id='For'></div>
 
@@ -92,10 +92,10 @@ console.log(Café e bom!)
 
 :arrow_forward: E uma repetição com um número limite de vezes, serve mais quando você sabe quantas vezes tem que repetir aquilo.
 1. Ele tem três partes, pegando do exemplo: </br>
-:small_orange_diamond: **let c = 2** A primeira parte você diz qual variável você quer que ele fique examinando, pode declarar a variável direto no 'for', ele ira declarar apenas uma vez, sem problemas. </br>
+:small_orange_diamond: **let c = 2** A primeira parte você diz qual variável você quer que ele fique examinando, pode declarar a variável direto no `for`, ele ira declarar apenas uma vez, sem problemas. </br>
 :small_orange_diamond: **c > 0** A segunda parte e a condição, ele ira examinar esta condição, se for verdadeiro ele continua, se for falsa ele sai da repetição. </br>
 :small_orange_diamond: **c--** A terceira e ultima parte, ele pega esta variável e adiciona ou subtrair algo, se não colocar isso ele irá repetir para sempre, sendo assim a ultima parte serve para adicionar ou retirar algo. </br>
-2. O 'for' so deve ser usado quando sabemos quantas vezes ele se repete, se não soubermos, devemos usar o 'while' ou 'do while' que veremos em breve.
+2. O `for` so deve ser usado quando sabemos quantas vezes ele se repete, se não soubermos, devemos usar o `while` ou `do while` que veremos em breve.
 
 <div id='while'></div>
 
@@ -126,7 +126,7 @@ a += 1
 } while(a == 0)
 ```
 
-:arrow_forward: São estruturas de repetição, com o mesmo objetivo do 'for', repetir um trecho de código, mas o 'while' e o 'do while' tem uma peculiaridade, eles podem repetir indefinidamente até que a condição seja satisfeita (Ou seja se torne falsa), isso e muito útil, para repetir procedimentos que não sabemos quantas vezes precisa. </br>
+:arrow_forward: São estruturas de repetição, com o mesmo objetivo do `for`, repetir um trecho de código, mas o `while` e o `do while` tem uma peculiaridade, eles podem repetir indefinidamente até que a condição seja satisfeita (Ou seja se torne falsa), isso e muito útil, para repetir procedimentos que não sabemos quantas vezes precisa. </br>
 1. **PRECISAMOS** que a condição seja possível, caso ele nunca seja possível, ele nunca ira parar, e ira virar um loop infinito. </br>
 2. O **while** verifica a condição no começo e executa o código, já o **do while**, executa o código e depois verificado a condição.
 
@@ -141,16 +141,16 @@ const Nome = Algo
 ```
 ### Exemplo:
 ```javascript
-var Batata = 'Batata'
-let Frita = 'Frita'
-const Gostoso = 'Gostoso'
+var Batata = `Batata`
+let Frita = `Frita`
+const Gostoso = `Gostoso`
 ```
 
 :arrow_forward: Vamos separar e ver cada um: <br/>
 :small_orange_diamond: **var** São simplesmente qualquer coisa, elas existem em todo o escopo do código não importando onde ela e criada, sendo assim e muito útil fora de uma função e etc.<br/>
 :small_orange_diamond: **let** Nada mais é que uma variável, mas o diferencial dela e que ela só existe **dentro do escopo** onde foi chamada, por exemplo, dentro de uma função, ela so vai existir dentro desse escopo.<br/>
-:small_orange_diamond: **const** É algo que não pode ser mudada, e imutável, diferente do 'var' e do 'let', ela e interessante para definir o PI ou para criar objetos. </br>
-1. Tem algo interessante das 'const', você não pode mudar o nome do objeto e nem suas propriedades, mas pode mudar o conteúdo destas propriedades, **exemplo**:
+:small_orange_diamond: **const** É algo que não pode ser mudada, e imutável, diferente do `var` e do `let`, ela e interessante para definir o PI ou para criar objetos. </br>
+1. Tem algo interessante das `const`, você não pode mudar o nome do objeto e nem suas propriedades, mas pode mudar o conteúdo destas propriedades, **exemplo**:
 
 ```javascript
 const Cafe = {nome: "Cafe importado", tipo: "Cafe importado de algum lugar", nota: 8.5}
@@ -174,11 +174,11 @@ document.createElement()
 let aElemento = document.createElement(a)
 ```
 
-:arrow_forward: Cria um elemento, igual você cria no html, so que via JS, ele pode ser um '<p>', '<li>', '<a>' ...
+:arrow_forward: Cria um elemento, igual você cria no html, so que via JS, ele pode ser um `<p>`, `<li>`, `<a>` ...
 
 <div id='createTextNode'></div>
 
-## :heavy_check_mark: createTextNode (Texto *ou* 'Texto')
+## :heavy_check_mark: createTextNode (Texto *ou* `Texto`)
 ### Original:
 ```javascript
 document.createTextNode()
@@ -189,12 +189,12 @@ document.createTextNode()
 let aTexto = document.createTextNode(BatataFrita)
 ```
 
-:arrow_forward: Cria uma palavra, frase ou texto, que depois deve ser acoplado em um elemento '<p>', '<li>', '<a>' ... </br>
+:arrow_forward: Cria uma palavra, frase ou texto, que depois deve ser acoplado em um elemento `<p>`, `<li>`, `<a>` ... </br>
 Deve ser acompanhado de uma **variável**.
 
 <div id='setAttribute'></div>
 
-## :heavy_check_mark: *Elemento*.setAttribute ('Atributo', Algo)
+## :heavy_check_mark: *Elemento*.setAttribute (`Atributo`, Algo)
 ### Original:
 ```javascript
 ***.setAttribute()
@@ -202,10 +202,10 @@ Deve ser acompanhado de uma **variável**.
 
 ### Exemplo:
 ```javascript
-aElemento.setAttribute('href', 'http://batatafrita.com.br')
+aElemento.setAttribute(`href`, `http://batatafrita.com.br`)
 ```
 
-:arrow_forward: Você adiciona um atributo dentro de um elemento, um atributo tipo ID, Class e etc, e um elemento como '<p>', '<li>', '<a>' ...
+:arrow_forward: Você adiciona um atributo dentro de um elemento, um atributo tipo ID, Class e etc, e um elemento como `<p>`, `<li>`, `<a>` ...
 
 <div id='appendChild'></div>
 
@@ -220,11 +220,11 @@ aElemento.setAttribute('href', 'http://batatafrita.com.br')
 aElemento.appendChild(aTexto)
 ```
 
-:arrow_forward: Ele serve para você juntar uma coisa na outra, o primeiro e pai do segundo parâmetro, ou seja, no exemplo, 'aTexto' é **filho** de 'aElemento'.
+:arrow_forward: Ele serve para você juntar uma coisa na outra, o primeiro e pai do segundo parâmetro, ou seja, no exemplo, `aTexto` é **filho** de `aElemento`.
 
 <div id='innerHTML'></div>
 
-## :heavy_check_mark: *Elemento*.innerHTML ('')
+## :heavy_check_mark: *Elemento*.innerHTML (``)
 ### Original:
 ```javascript
 ***.innerHTML()
@@ -232,14 +232,14 @@ aElemento.appendChild(aTexto)
 
 ### Exemplo:
 ```javascript
-aElemento.innerHTML('Prefiro cafe') ou ('')
+aElemento.innerHTML('Prefiro cafe') ou (')
 ```
 
 :arrow_forward: Serve para escrever com e sobre o html, ou seja, se você quiser, pode escrever todo o código html com este método, é mais utilizado para apagar o conteúdo do html.
 
 <div id='querySelector'></div>
 
-## :heavy_check_mark: document.querySelector('')
+## :heavy_check_mark: document.querySelector(``)
 ### Original:
 ```javascript
 *elemento* = document.querySelector('')
@@ -251,8 +251,8 @@ inputUser = document.querySelector('input#usuario')
 ```
 
 :arrow_forward: Ele coloca o conteúdo de algo do arquivo HTML para dentro de uma variável, o **querySelector** e uma forma nova de selecionar os ID,Class,Elementos...
-1. Dentro do '('')' ele usa a mesma sintaxe do CSS, então no exemplo, colocando ''input#usuario'' você seleciona o '<input>' com o '<id='usuario'>'.
-2. Também pode selecionar apenas o 'id', não importando se for '<input>', '<div>', '<p>'..., mas não aconselho, e melhor colocar o caminho.
+1. Dentro do `(``)` ele usa a mesma sintaxe do CSS, então no exemplo, colocando `'input#usuario'` você seleciona o `<input>` com o `<id=`usuario`>`.
+2. Também pode selecionar apenas o `id`, não importando se for `<input>`, `<div>`, `<p>`..., mas não aconselho, e melhor colocar o caminho.
 
 <div id='Length'></div>
 
@@ -277,7 +277,7 @@ nota.value
 
 :arrow_forward: Vamos por partes: </br>
 :small_orange_diamond: **length** Serve para retornar o tamanho de algo, seja dos caracteres de uma frase ou o tamanho de uma lista ou algo do tipo. </br>
-:small_orange_diamond: **value** Retorna um 'Number' em vez de uma string, isto é útil quando queremos o conteúdo de um '<input>' ou algo assim, ele invés de retornar uma 'string' contendo o numero, com o **value**, ele retorna o valor de dentro desta 'string'.
+:small_orange_diamond: **value** Retorna um `Number` em vez de uma string, isto é útil quando queremos o conteúdo de um `<input>` ou algo assim, ele invés de retornar uma `string` contendo o numero, com o **value**, ele retorna o valor de dentro desta `string`.
 
 <div id='Arrow'></div>
 
@@ -302,13 +302,13 @@ console.log(Pessoa)
 })
 ```
 
-:arrow_forward: As queridas **arrow functions** funcionam da mesma forma que você colocar 'function()', algumas **funções** + **métodos**, pedem uma função anonima, e em vez de, você colocar 'function()', você deve colocar '() => {}'.
+:arrow_forward: As queridas **arrow functions** funcionam da mesma forma que você colocar `function()`, algumas **funções** + **métodos**, pedem uma função anonima, e em vez de, você colocar `function()`, você deve colocar `() => {}`.
 1. Esse tipo, e dividido da seguinte maneira: </br>
-:small_orange_diamond: '()' Esta parte recebe os parâmetros, igual na função anonima. </br>
-:small_orange_diamond: '=>' O simbolo de igual + simbolo de maior, chama a função anonima, da mesma forma que se fizesse 'function()' </br>
-:small_orange_diamond: '{}' Isto e interessante, caso o seu código tenha apenas uma linha, seja um 'return' ou um 'console.log' por exemplo, não precisa usar chave, só colocar do lado do '=>', agora se tiver mais linhas, precisa usar as chaves '{}' </br>
+:small_orange_diamond: `()` Esta parte recebe os parâmetros, igual na função anonima. </br>
+:small_orange_diamond: `=>` O simbolo de igual + simbolo de maior, chama a função anonima, da mesma forma que se fizesse `function()` </br>
+:small_orange_diamond: `{}` Isto e interessante, caso o seu código tenha apenas uma linha, seja um `return` ou um `console.log` por exemplo, não precisa usar chave, só colocar do lado do `=>`, agora se tiver mais linhas, precisa usar as chaves `{}` </br>
 
-<div id='Axios'></div>
+<div id=`Axios`></div>
 
 ## :heavy_check_mark: Axios
 ### Original:
@@ -324,10 +324,10 @@ axios.Metodo('url')
 
 ### Exemplo:
 ```javascript
-axios.get('https://api.github.com/users/cafesao/repos')
+axios.get(`https://api.github.com/users/cafesao/repos`)
 .then ((response) => {
 let tamanhoLista = response.data.length
-usuario.value = ''
+usuario.value = ``
 if (tamanhoLista == 0){
 console.log('Sem repositório!')
 }
@@ -344,9 +344,9 @@ console.log('Erro 404 - Não existe este USER')
 })
 ```
 
-:arrow_forward: O axios e uma forma de eviar as **Promise**, o axios agiliza isso de forma rápida e menos verbosa, isso torna o desenvolvimento muito mais **rápido**, existe varias formas e vários métodos, como o '.get', '.push' e etc.
+:arrow_forward: O axios e uma forma de eviar as **Promise**, o axios agiliza isso de forma rápida e menos verbosa, isso torna o desenvolvimento muito mais **rápido**, existe varias formas e vários métodos, como o `.get`, `.push` e etc.
 1. O axios, acompanha um **metodo** + *parâmetro* (Quase sempre uma URL), junto temos o:
 :small_orange_diamond: **.then** Caso tudo ocorra como o esperado a url retorne algo valido.
 :small_orange_diamond: **.catch** Se algo der errado, retorna um erro, igual nas Promise.
-1. O **.then** e o **.catch** precisam de uma função anonima(as 'function()'), mas, conforme o ES6, você pode usar um *Arrow functions* '(*Parâmetro*) => {**Código**}'.
+1. O **.then** e o **.catch** precisam de uma função anonima(as `function()`), mas, conforme o ES6, você pode usar um *Arrow functions* `(*Parâmetro*) => {**Código**}`.
 
