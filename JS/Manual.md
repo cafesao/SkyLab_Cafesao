@@ -1,7 +1,7 @@
 <h1  align='center'> Manual de algumas coisas do JS :star:</h1>
 
 ## **Tabela de conteudo**
-1. [Função](#function)
+1. [Função](#Function)
 2. [If, else e else if](#if-else-e-else-if)
 3. [For](#for)
 4. [While, Do while](#while-do-while)
@@ -16,6 +16,7 @@
 13. [Arrow Functions](#heavycheckmark-arrow-functions)
 14. [Axios](#heavycheckmark-axios)
 
+<div id='Function'></div>
 
 ## :heavy_check_mark: Function
 ### Original: 
