@@ -13,6 +13,8 @@
 10. [InnerHTML](#elementoinnerhtml)
 11. [QuerySelector](#documentqueryselector)
 12. [Length e Value](#length-e-value)
+13. [Arrow Functions](#heavycheckmark-arrow-functions)
+14. [Axios](#heavycheckmark-axios)
 
 
 ## :heavy_check_mark: Function
@@ -257,4 +259,71 @@ nota.value
 :arrow_forward: Vamos por partes: </br>
 :small_orange_diamond: **length** = Serve para retornar o tamanho de algo, seja dos caracteres de uma frase ou o tamanho de uma lista ou algo do tipo. </br>
 :small_orange_diamond: **value** = A principal função e retornar um Number em vez de uma string, isso e util quando queremos o conteudo de um Input ou algo assim, ele invez de retornar uma string contendo o numero, com o **value**, ele retorna o valor de dentro desta string.
+
+## :heavy_check_mark: Arrow Functions =>
+### Original:
+```javascript
+() => {}
+
+OU
+
+() => ***
+```
+
+### Exemplo:
+```javascript
+CriarPessoa((idade) => {
+    const Pessoa = {
+        nome: 'Gabriel',
+        idade
+    }
+    console.log(Pessoa)
+})
+```
+
+:arrow_forward: As queridas **arrow functions** funcionam da mesma forma que você colocar `function()`, algumas **funções** + **metodos**, pedem uma função anonima, e em vez, de você colocar `function()`, você deve colocar `() => {}`.
+1. Esse tipo, e dividido da seguinte maneira: </br>
+:small_orange_diamond: `()` = Esta parte recebe os parametros, igual na função anonima. </br>
+:small_orange_diamond: `=>` = O simbolo de igual + simbolo de maior, chama a função anonima, da mesma forma que se fizesse `function()` </br>
+:small_orange_diamond: `{}` = Isto e interessante, caso o seu codigo tenha apenas uma linha, seja um `return` ou um `console.log` por exemplo, não precisa usar chave, so colocar do lado do `=>`, agora se tiver mais linhas, precisa usar as chaves `{}` </br>
+
+## :heavy_check_mark: Axios
+### Original:
+```javascript
+axios.Metodo('url')
+    .then ((response) => {
+        ***
+    })
+    .catch ((error) => {
+        ***
+    })
+```
+
+### Exemplo:
+```javascript
+axios.get('https://api.github.com/users/cafesao/repos')
+    .then ((response) => {
+        let tamanhoLista = response.data.length
+        usuario.value = ''
+        if (tamanhoLista == 0){
+            console.log('Sem repositório!')
+        }
+        for(let cont = 0; cont <= tamanhoLista; cont++){
+            var nameLista = response.data[cont].name
+            var link = response.data[cont].html_url
+            console.log(`Nome do repositório ${nameLista}`)
+            console.log(`URL: ${link}`)
+        }
+    })
+    .catch ((error) => {
+        if(error == 'Error: Request failed with status code 404'){
+            console.log('Erro 404 - Não existe este USER')
+        })
+```
+
+:arrow_forward: O axios e uma forma de eviar as **Promise**, o axios agiliza isso de forma rapida e menos verbosa, isso torna o desenvolvimento muito mais **rapido**, existe varias formas e varios metodos, como o get, push e etc.
+1. O axios, acompanha um **metodo** + *parametro* (Quase sempre uma URL), junto temos o: 
+:small_orange_diamond: **.then**: Acontece caso tudo ocorra como o esperado e a url retorne algo valido.
+:small_orange_diamond: **.catch**: Acontece se algo der errado, no caso, retorne um erro, igual nas Promise.
+2. O **.then** e o **.catch** precisam de uma função anonima(as *function()*), mas, conforme o ES6, você pode usar um *Arrow functions* `(*Parametro*) => {**Codigo**}`
 
