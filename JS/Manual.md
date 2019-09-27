@@ -45,13 +45,14 @@ if(parametro ? parametro) {}
 if(nota == 10) {notaExplicação = 'M A R A V I L H O S O'}
 ```
 
-:arrow_forward: O **if** serve para verificar a condição, se algo e verdadeiro ou falso, esta condição esta dentro dos (), a condição e simples, você faz uma pergunta, se a resposta for verdadeiro, o codigo de dentro deste if e executado, se não, continua o programa e ignora o codigo dentro.
+:arrow_forward **if** serve para verificar a condição, se algo e verdadeiro ou falso, esta condição esta dentro dos (), a condição e simples, você faz uma pergunta, se a resposta for verdadeiro, o codigo de dentro deste if e executado, se não, continua o programa e ignora o codigo dentro.
 
 1. O if pode vir acompanhado com seus amigos o else{} e o else if() {}: </br>
-**else** = Serve para que quando for falso ele executa, else signfica se não, então, caso a condição do if for falsa, caso exista um else, ele vai ser executado.
-**else if** = O else if tem quase o mesmo objetivo do else, so e executado quando o if e falso, mas o else if, faz uma novo exame em uma condição, e como se você junstasse o if e o else, ele so **executa** caso o if seja **falso**, se for, ele faz uma nova analise da condição.
+:small_orange_diamond: **else** = Serve para que quando for falso ele executa, else signfica se não, então, caso a condição do if for falsa, caso exista um else, ele vai ser executado.
+:small_orange_diamond: **else if** = O else if tem quase o mesmo objetivo do else, so e executado quando o if e falso, mas o else if, faz uma novo exame em uma condição, e como se você junstasse o if e o else, ele so **executa** caso o if seja **falso**, se for, ele faz uma nova analise da condição.
 2. O else if, pode ter seus proprios else.
-3. Existe varios simbolos que é utilizado para examinar se algo e verdadeiro ou falso, alguns mais utilizados:
+3. Existe varios simbolos que é utilizado para examinar se algo e verdadeiro ou falso, alguns mais utilizados:  
+   </br>
    :small_blue_diamond: Igual (==) </br>
    :small_blue_diamond: Não igual (!=) </br>
    :small_blue_diamond: Estritamente igual (===) </br>
@@ -79,9 +80,9 @@ for(let c = 2; c > 0; c--) { console.log(Café e bom!) }
 
 :arrow_forward: E uma repetição com um numero limite de vezes, serve mais quando você sabe quantas vezes tem que repetir aquilo.
 Ele tem três partes, pegando do exemplo:
-**let c = 2** = A primeira parte você diz qual variavel você quer que ele fique examinando, pode declarar a variavel direto no for, ele ira declarar apenas uma vez, sem problemas. </br>
-**c > 0** = A segunda parte e a condição, ele ira examinar esta condição, se for verdadeiro ele continua, se for falsa ele sai da repetição. </br>
-**c--** = A terceira e ultima parte, ele pega esta variavel e adiciona ou subtrair algo, por quê pensa, se não tivesse isso, ele repetirar para sempre, sendo assim a ultima parte serve para adicionar ou retirar algo. </br>
+:small_orange_diamond: **let c = 2** = A primeira parte você diz qual variavel você quer que ele fique examinando, pode declarar a variavel direto no for, ele ira declarar apenas uma vez, sem problemas. </br>
+:small_orange_diamond: **c > 0** = A segunda parte e a condição, ele ira examinar esta condição, se for verdadeiro ele continua, se for falsa ele sai da repetição. </br>
+:small_orange_diamond: **c--** = A terceira e ultima parte, ele pega esta variavel e adiciona ou subtrair algo, por quê pensa, se não tivesse isso, ele repetirar para sempre, sendo assim a ultima parte serve para adicionar ou retirar algo. </br>
 1. O for so deve ser usado quando sabemos quantas vezes ele se repete, se não soubermos, devemos usar o while que veremos em breve.
 
 
@@ -133,9 +134,9 @@ const Gostoso = 'Gostoso'
 
 
 :arrow_forward: Vamos separar e ver cada um: <br/>
-**var** = Variáveis e simplesmente qualquer coisa, ela existe em todo o escopo do código não importando onde ela e criada, sendo assim e muito útil fora de uma função e etc.<br/>
-**let** = Let nada mais é que uma variavel, mas o diferencial dela e que ela só existe dentro do 	escopo onde foi chamada, por exemplo, dentro de uma função, ela so vai existir dentro desse escopo.<br/>
-**const** = Constante, e algo que é sempre assim, não pode ser mudada, e imutável, diferente do var e do let, ela e interessante para definir o PI ou para criar objetos, tem uma curiosidade, você não pode mudar o nome do objeto e nem suas propriedades, mas pode mudar o conteúdo destas propriedades, **exemplo**: 
+:small_orange_diamond: **var** = Variáveis e simplesmente qualquer coisa, ela existe em todo o escopo do código não importando onde ela e criada, sendo assim e muito útil fora de uma função e etc.<br/>
+:small_orange_diamond: **let** = Let nada mais é que uma variavel, mas o diferencial dela e que ela só existe dentro do 	escopo onde foi chamada, por exemplo, dentro de uma função, ela so vai existir dentro desse escopo.<br/>
+:small_orange_diamond: **const** = Constante, e algo que é sempre assim, não pode ser mudada, e imutável, diferente do var e do let, ela e interessante para definir o PI ou para criar objetos, tem uma curiosidade, você não pode mudar o nome do objeto e nem suas propriedades, mas pode mudar o conteúdo destas propriedades, **exemplo**: 
 
 ```javascript
 const Cafe = {nome: "Cafe importado", tipo: "Cafe importado de algum lugar", nota: 8.5}
@@ -254,6 +255,6 @@ nota.value
 ```
 
 :arrow_forward: Vamos por partes: </br>
-**length** = Serve para retornar o tamanho de algo, seja dos caracteres de uma frase ou o tamanho de uma lista ou algo do tipo. </br>
-**value** = A principal função e retornar um Number em vez de uma string, isso e util quando queremos o conteudo de um Input ou algo assim, ele invez de retornar uma string contendo o numero, com o **value**, ele retorna o valor de dentro desta string.
+:small_orange_diamond: **length** = Serve para retornar o tamanho de algo, seja dos caracteres de uma frase ou o tamanho de uma lista ou algo do tipo. </br>
+:small_orange_diamond: **value** = A principal função e retornar um Number em vez de uma string, isso e util quando queremos o conteudo de um Input ou algo assim, ele invez de retornar uma string contendo o numero, com o **value**, ele retorna o valor de dentro desta string.
 
