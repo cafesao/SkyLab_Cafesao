@@ -50,7 +50,7 @@ if(parametro ? parametro) {}
 ### Exemplo:
 ```javascript
 if(nota == 10) {
-notaExplicação = 'M A R A V I L H O S O'
+    notaExplicação = 'M A R A V I L H O S O'
 }
 ```
 
@@ -85,7 +85,7 @@ for (*Elemento*; *Comparação*; *adição ou subtração*) {}
 ### Exemplo:
 ```javascript
 for(let c = 2; c > 0; c--) {
-console.log(Café e bom!)
+    console.log(Café e bom!)
 }
 ```
 
@@ -111,17 +111,17 @@ do {} while (*comparação*)
 ### Exemplo:
 ```javascript
 while(a == 0) {
-let a = 2
-console.log(a)
-a -= 1
+    let a = 2
+    console.log(a)
+    a -= 1
 }
 
 ou
 
 do {
 let a = 2
-console.log(a)
-a += 1
+    console.log(a)
+    a += 1
 } while(a == 0)
 ```
 
@@ -250,7 +250,7 @@ inputUser = document.querySelector('input#usuario')
 ```
 
 :arrow_forward: Ele coloca o conteúdo de algo do arquivo HTML para dentro de uma variável, o **querySelector** e uma forma nova de selecionar os ID,Class,Elementos...
-1. Dentro do `(``)` ele usa a mesma sintaxe do CSS, então no exemplo, colocando `'input#usuario'` você seleciona o `<input>` com o `<id=`usuario`>`.
+1. Dentro do `('')` ele usa a mesma sintaxe do CSS, então no exemplo, colocando `'input#usuario'` você seleciona o `<input>` com o `<id=`usuario`>`.
 2. Também pode selecionar apenas o `id`, não importando se for `<input>`, `<div>`, `<p>`..., mas não aconselho, e melhor colocar o caminho.
 
 <div id='Length'></div>
@@ -266,12 +266,12 @@ ou
 ### Exemplo:
 ```javascript
 let batata = 'Batata é bom'
-batata.length
+console.log(batata.length)
 
 ou
 
 let nota = 6
-nota.value
+console.log(nota.value)
 ```
 
 :arrow_forward: Vamos por partes: </br>
@@ -293,11 +293,11 @@ OU
 ### Exemplo:
 ```javascript
 CriarPessoa((idade) => {
-const Pessoa = {
-nome: 'Gabriel',
-idade
+    const Pessoa = {
+    nome: 'Gabriel',
+    idade
 }
-console.log(Pessoa)
+    console.log(Pessoa)
 })
 ```
 
@@ -313,34 +313,35 @@ console.log(Pessoa)
 ### Original:
 ```javascript
 axios.Metodo('url')
-.then ((response) => {
-***
-})
-.catch ((error) => {
-***
-})
+    .then ((response) => {
+        ***
+    })
+    .catch ((error) => {
+        ***
+    })
 ```
 
 ### Exemplo:
 ```javascript
 axios.get(`https://api.github.com/users/cafesao/repos`)
-.then ((response) => {
-let tamanhoLista = response.data.length
-usuario.value = ``
-if (tamanhoLista == 0){
-console.log('Sem repositório!')
-}
-for(let cont = 0; cont <= tamanhoLista; cont++){
-var nameLista = response.data[cont].name
-var link = response.data[cont].html_url
-console.log('Nome do repositório ${nameLista}')
-console.log('URL: ${link}')
-}
-})
-.catch ((error) => {
-if(error == 'Error: Request failed with status code 404'){
-console.log('Erro 404 - Não existe este USER')
-})
+    .then ((response) => {
+        let tamanhoLista = response.data.length
+        usuario.value = ``
+        if (tamanhoLista == 0){
+            console.log('Sem repositório!')
+        }
+        for(let cont = 0; cont <= tamanhoLista; cont++){
+            var nameLista = response.data[cont].name
+            var link = response.data[cont].html_url
+            console.log('Nome do repositório ${nameLista}')
+            console.log('URL: ${link}')
+        }
+    })
+    .catch ((error) => {
+        if(error == 'Error: Request failed with status code 404'){
+            console.log('Erro 404 - Não existe este USER')
+        }
+    })
 ```
 
 :arrow_forward: O axios e uma forma de eviar as **Promise**, o axios agiliza isso de forma rápida e menos verbosa, isso torna o desenvolvimento muito mais **rápido**, existe varias formas e vários métodos, como o `.get`, `.push` e etc. </br>
@@ -348,4 +349,3 @@ console.log('Erro 404 - Não existe este USER')
 :small_orange_diamond: **.then** Caso tudo ocorra como o esperado a url retorne algo valido. </br>
 :small_orange_diamond: **.catch** Se algo der errado, retorna um erro, igual nas Promise. </br>
 2. O **.then** e o **.catch** precisam de uma função anonima(as `function()`), mas, conforme o ES6, você pode usar um *Arrow functions* `(*Parâmetro*) => {**Código**}`.
-
