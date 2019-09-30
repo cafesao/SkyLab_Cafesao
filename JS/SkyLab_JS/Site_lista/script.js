@@ -5,7 +5,7 @@ var buttonRemoverElementos = document.querySelector('#site button#apagarTudo')
 var todosTextos = JSON.parse(localStorage.getItem('lista_todos')) || []
 
 function adicionarLI(){
-    var liTexto = inputElemento.value
+    let liTexto = inputElemento.value
     todosTextos.push(liTexto)
     inputElemento.value = ''
     renderizarLI()
@@ -15,11 +15,11 @@ function adicionarLI(){
 function renderizarLI(){
     listElemento.innerHTML = ''
     for(texto of todosTextos){
-        var liElemento = document.createElement('li')
-        var liText = document.createTextNode(texto)
-        var linkElemento = document.createElement('a')
-        var linkText = document.createTextNode('Excluir')
-        var pos = todosTextos.indexOf(texto)
+        let liElemento = document.createElement('li')
+        let liText = document.createTextNode(texto)
+        let linkElemento = document.createElement('a')
+        let linkText = document.createTextNode('Excluir')
+        let pos = todosTextos.indexOf(texto)
         linkElemento.setAttribute('href', '#')
         linkElemento.setAttribute('onclick', 'excluirLI('+ pos +')')
         linkElemento.appendChild(linkText)
