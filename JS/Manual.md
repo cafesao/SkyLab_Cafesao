@@ -1,30 +1,32 @@
-<h1 align='center'> Manual de algumas coisas do JS :star:</h1>
+<h1 align='center'> Manual de JS :star:</h1>
 
 ## **Tabela de conteudo**
 1. [Função](#Function)
-2. [If, else e else if](#If-else-e-else-if)
-3. [For](#For)
-4. [While, Do while](#while)
-5. [Var, Let ou Const](#var)
-6. [CreateElement](#createElement)
-7. [CreateTextNode](#createTextNode)
-8. [SetAttribute](#setAttribute)
-9. [AppendChild](#appendChild)
-10. [InnerHTML](#innerHTML)
-11. [QuerySelector](#querySelector)
-12. [Length e Value](#Length)
-13. [Arrow Functions](#Arrow)
-14. [Axios](#Axios)
+2. [Classe](#classe)
+3. [If, else e else if](#If-else-e-else-if)
+4. [For](#For)
+5. [While, Do while](#while)
+6. [Var, Let ou Const](#var)
+7. [CreateElement](#createElement)
+8. [CreateTextNode](#createTextNode)
+9. [SetAttribute](#setAttribute)
+10. [AppendChild](#appendChild)
+11. [InnerHTML](#innerHTML)
+12. [QuerySelector](#querySelector)
+13. [Length e Value](#Length)
+14. [Arrow Functions](#Arrow)
+15. [Axios](#Axios)
+16. [LocalStorage](#localStorage)
 
 <div id='Function'></div>
 
 ## :heavy_check_mark: Function
-### Original:
+### Original
 ```javascript
-function NomeDaFunção (parametro) {}
+function NomeDaFuncao (parametro) {}
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 function somar (a, b) {return a + b}
 ```
@@ -34,20 +36,85 @@ function somar (a, b) {return a + b}
 1. Não devemos passar vários *parâmetros* para uma função, isso deixa feio e é “anti-clencode”.
 2. Não devemos chamar uma função dentro da outra, pelos mesmos motivos.
 3. A função só deve fazer uma coisa, e deve fazer isso bem feito: </br>
-:small_blue_diamond: **Exemplo:** Uma função que soma dois números é melhor que uma função que soma, subtrai, divide, multiplica e etc.
+:small_blue_diamond: **Exemplo** Uma função que soma dois números é melhor que uma função que soma, subtrai, divide, multiplica e etc.
 4. A função deve ser escrita em letras minúsculas, mas quando tem duas palavras, a primeira letra da primeira palavra deve ser minúsculo, mas a primeira letra das próximas palavras devem ser em maiúsculo. </br>
-:small_blue_diamond: **Exemplo:** *limparTela* ou *somarNumerosRomanos*.
+:small_blue_diamond: **Exemplo** *limparTela* ou *somarNumerosRomanos*.
 5. A função quase sempre precisa de um `return` seja ele vazio ou com algo.
+
+<div id='classe'></div>
+
+## :heavy_check_mark: Classe
+### Original
+```javascript
+class *** {
+    constructor() {
+        this.*** = ***
+    }
+    ***() {
+
+    }
+}
+class *** extends ***{
+    constructor() {
+        super(***)
+        this.*** = ***
+    }
+    ***() {
+
+    }
+}
+```
+
+### Exemplo
+```javascript
+class Pessoa{
+    constructor (nome, idade){
+        this.nome = nome
+        this.idade = idade
+    }
+    sobre(){
+        console.log(`Você é ${this.nome}, e tem ${this.idade} anos.`)
+    }
+}
+class Pessoas extends Pessoa{
+    constructor(nome, idade, cidade){
+        super(nome, idade)
+        this.cidade = cidade
+    }
+    sobre_local(){
+        console.log(super.sobre())
+        console.log(`Mora na cidade: ${this.cidade}`)
+    }
+} 
+const joão = new Pessoa ('João', 29)
+const pedro = new Pessoas ('Pedro', 49, 'Rio Grande')
+
+joão.sobre()
+pedro.sobre_local()
+```
+
+:arrow_forward: As famosas e amadas classes, pedimos tanto para vir e chegou com o ES6, vamos começar pelo o que é uma classe. </br>
+Classes nada mais é que um "uniforme" que as variaveis vão usar que tem algo em comum, um exemplo e que todas as pessoas são pessoas, então a pessoa esta dentro da classe Pessoa, eles tem caracteriscticas de nome, idade, ..., isso ajuda muito, pois, não precisamos repetir o codigo toda a vez, isso facilita muito.
+
+1. Vamos analizar as classes: </br>
+:small_orange_diamond: **class Pessoa{}** Define que é uma classe e o nome, super simples. </br>
+:small_orange_diamond: **constructor() {}** Chama o metodo construtor e nele deve passar o que quer que a classe use localmente, seja uma variavel ou algo do tipo, tem que estar atento que precisa **sempre** do `.this`. </br>
+:small_orange_diamond: **sobre() {}** Define um metodo com o **nome** e os *parametros*, como se fosse uma função normal. </br>
+1. Agora vamos analizar a classe com extensão de outra: </br>
+:small_orange_diamond: **class Pessoas extends Pessoa{}** A mesma coisa que uma classe normal, mas, com extensão de outra, todas os metodos, incluindo o construtor. </br>
+:small_orange_diamond: **super()** Deve ser sempre a primeira linha do construtor filho e serve para passar as informações para a classe pai, seja as variaveis no caso do `constructor` ou os metodos no caso do `super.sobre()` </br>
+3. Para instanciar uma classe, devemos criar uma `const` (**Recomendado**), `var` ou `let`, com o nome e em seguida `new NomeDaClasse`, depois e so chamar o elemento junto com o metodo, igual no `joão.sobre()` ou `pedro.sobre_local()` </br>
+4. Para acessar as informações dentro do metodo construtor, devemos colocar `this.***`, assim pode acessar as informações dentro do constructor.
 
 <div id='If-else-e-else-if'></div>
 
 ## :heavy_check_mark: If, else e else if
-### Original:
+### Original
 ```javascript
 if(parametro ? parametro) {}
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 if(nota == 10) {
     notaExplicação = 'M A R A V I L H O S O'
@@ -77,12 +144,12 @@ if(nota == 10) {
 <div id='For'></div>
 
 ## :heavy_check_mark: For
-### Original:
+### Original
 ```javascript
 for (*Elemento*; *Comparação*; *adição ou subtração*) {}
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 for(let c = 2; c > 0; c--) {
     console.log(Café e bom!)
@@ -90,7 +157,7 @@ for(let c = 2; c > 0; c--) {
 ```
 
 :arrow_forward: E uma repetição com um número limite de vezes, serve mais quando você sabe quantas vezes tem que repetir aquilo.
-1. Ele tem três partes, pegando do exemplo: </br>
+1. Ele tem três partes, pegando do Exemplo </br>
 :small_orange_diamond: **let c = 2** A primeira parte você diz qual variável você quer que ele fique examinando, pode declarar a variável direto no `for`, ele ira declarar apenas uma vez, sem problemas. </br>
 :small_orange_diamond: **c > 0** A segunda parte e a condição, ele ira examinar esta condição, se for verdadeiro ele continua, se for falsa ele sai da repetição. </br>
 :small_orange_diamond: **c--** A terceira e ultima parte, ele pega esta variável e adiciona ou subtrair algo, se não colocar isso ele irá repetir para sempre, sendo assim a ultima parte serve para adicionar ou retirar algo. </br>
@@ -99,7 +166,7 @@ for(let c = 2; c > 0; c--) {
 <div id='while'></div>
 
 ## :heavy_check_mark: While, Do while
-### Original:
+### Original
 ```javascript
 while (*comparação*) {}
 
@@ -108,7 +175,7 @@ ou
 do {} while (*comparação*)
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 while(a == 0) {
     let a = 2
@@ -132,13 +199,13 @@ let a = 2
 <div id='var'></div>
 
 ## :heavy_check_mark: Var, Let ou Const
-### Original:
+### Original
 ```javascript
 var Nome = Algo
 let Nome = Algo
 const Nome = Algo
 ```
-### Exemplo:
+### Exemplo
 ```javascript
 var Batata = `Batata`
 let Frita = `Frita`
@@ -163,12 +230,12 @@ Cafe.nome = “Cafe Brasileiro”
 <div id='createElement'></div>
 
 ## :heavy_check_mark: createElement (Elemento)
-### Original:
+### Original
 ```javascript
 document.createElement()
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 let aElemento = document.createElement(a)
 ```
@@ -178,12 +245,12 @@ let aElemento = document.createElement(a)
 <div id='createTextNode'></div>
 
 ## :heavy_check_mark: createTextNode (Texto *ou* `Texto`)
-### Original:
+### Original
 ```javascript
 document.createTextNode()
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 let aTexto = document.createTextNode(BatataFrita)
 ```
@@ -194,12 +261,12 @@ Deve ser acompanhado de uma **variável**.
 <div id='setAttribute'></div>
 
 ## :heavy_check_mark: *Elemento*.setAttribute (`Atributo`, Algo)
-### Original:
+### Original
 ```javascript
 ***.setAttribute()
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 aElemento.setAttribute(`href`, `http://batatafrita.com.br`)
 ```
@@ -209,12 +276,12 @@ aElemento.setAttribute(`href`, `http://batatafrita.com.br`)
 <div id='appendChild'></div>
 
 ## :heavy_check_mark: *Elemento*.appendChild (Elemento)
-### Original:
+### Original
 ```javascript
 ***.appendChild(***)
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 aElemento.appendChild(aTexto)
 ```
@@ -224,12 +291,12 @@ aElemento.appendChild(aTexto)
 <div id='innerHTML'></div>
 
 ## :heavy_check_mark: *Elemento*.innerHTML (``)
-### Original:
+### Original
 ```javascript
 ***.innerHTML()
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 aElemento.innerHTML('Prefiro cafe') ou (')
 ```
@@ -239,12 +306,12 @@ aElemento.innerHTML('Prefiro cafe') ou (')
 <div id='querySelector'></div>
 
 ## :heavy_check_mark: document.querySelector(``)
-### Original:
+### Original
 ```javascript
 *elemento* = document.querySelector('')
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 inputUser = document.querySelector('input#usuario')
 ```
@@ -256,14 +323,14 @@ inputUser = document.querySelector('input#usuario')
 <div id='Length'></div>
 
 ## :heavy_check_mark: Length e Value
-### Original:
+### Original
 ```javascript
 ***.length
 ou
 ***.value
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 let batata = 'Batata é bom'
 console.log(batata.length)
@@ -281,7 +348,7 @@ console.log(nota.value)
 <div id='Arrow'></div>
 
 ## :heavy_check_mark: Arrow Functions =>
-### Original:
+### Original
 ```javascript
 () => {}
 
@@ -290,7 +357,7 @@ OU
 () => ***
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 CriarPessoa((idade) => {
     const Pessoa = {
@@ -307,10 +374,10 @@ CriarPessoa((idade) => {
 :small_orange_diamond: `=>` O simbolo de igual + simbolo de maior, chama a função anonima, da mesma forma que se fizesse `function()` </br>
 :small_orange_diamond: `{}` Isto e interessante, caso o seu código tenha apenas uma linha, seja um `return` ou um `console.log` por exemplo, não precisa usar chave, só colocar do lado do `=>`, agora se tiver mais linhas, precisa usar as chaves `{}` </br>
 
-<div id=`Axios`></div>
+<div id='Axios'></div>
 
 ## :heavy_check_mark: Axios
-### Original:
+### Original
 ```javascript
 axios.Metodo('url')
     .then ((response) => {
@@ -321,7 +388,7 @@ axios.Metodo('url')
     })
 ```
 
-### Exemplo:
+### Exemplo
 ```javascript
 axios.get(`https://api.github.com/users/cafesao/repos`)
     .then ((response) => {
@@ -349,3 +416,34 @@ axios.get(`https://api.github.com/users/cafesao/repos`)
 :small_orange_diamond: **.then** Caso tudo ocorra como o esperado a url retorne algo valido. </br>
 :small_orange_diamond: **.catch** Se algo der errado, retorna um erro, igual nas Promise. </br>
 2. O **.then** e o **.catch** precisam de uma função anonima(as `function()`), mas, conforme o ES6, você pode usar um *Arrow functions* `(*Parâmetro*) => {**Código**}`.
+
+<div id='localStorage'></div>
+
+## :heavy_check_mark: Local Storage
+### Original
+```javascript
+JSON.parse(localStorage.getItem('***'))
+
+OU
+
+localStorage.setItem('***', JSON.stringify(***))
+```
+
+### Exemplo
+```javascript
+var lista_todos = ['Café', 'Maça', 'Abacaxi']
+localStorage.setItem('lista_storage', JSON.stringify(lista_todos))
+JSON.parse(localStorage.getItem('lista_storage')) || []
+```
+
+:arrow_forward: Algo curioso e o localStorage, ele é um tipo de banco da dados interno, tem capacidade de armazenar *chave* + **valor**, e pode fechar o browser, reinicar o computador e etc, e mesmo assim, ainda vai existir esses dados, a menos que, algo apague.
+
+1. Vamos explicar os dois comandos:</br>
+:small_orange_diamond: **.setItem** Pega as informações que esta dentro dos parenteses e envia para dentro deste banco de dados, detalhe, tem que ser um **JSON**. </br>
+Dentro temos o primeiro *parametro* `'***'`, que e o nome deste banco de dados, e em seguida o objeto, lista... que queremos enviar.</br>
+:small_orange_diamond: **getItem** Ele pega o que esta dentro do banco de dados e coloca dentro de um Objeto, detalhe, ele tem que ser convetido para **Objeto**. </br>
+Dentro temos apenas um *parametro* que é o nome do banco de dados que queremos pegar as informações.</br>
+2. O JS oferece dois tipos de conversão, de JSON para Objeto e Objeto para JSON, são elas:</br>
+:small_orange_diamond: **JSON.stringify()** Que converte um objeto, lista... em um JSON.</br>
+:small_orange_diamond: **JSON.parse()** Ele converte um JSON em um objeto.</br>
+
