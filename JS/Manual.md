@@ -3,20 +3,23 @@
 ## **Tabela de conteudo**
 1. [Função](#Function)
 2. [Classe](#classe)
-3. [If, else e else if](#If-else-e-else-if)
-4. [For](#For)
-5. [While, Do while](#while)
-6. [Var, Let ou Const](#var)
-7. [CreateElement](#createElement)
-8. [CreateTextNode](#createTextNode)
-9. [SetAttribute](#setAttribute)
-10. [AppendChild](#appendChild)
-11. [InnerHTML](#innerHTML)
-12. [QuerySelector](#querySelector)
-13. [Length e Value](#Length)
-14. [Arrow Functions](#Arrow)
-15. [Axios](#Axios)
-16. [LocalStorage](#localStorage)
+3. [Classe Estática](#classe-estastica)
+4. [If, else e else if](#If-else-e-else-if)
+5. [For](#For)
+6. [While, Do while](#while)
+7. [Var, Let ou Const](#var)
+8. [Objetos](#objetos)
+9. [CreateElement](#createElement)
+10. [CreateTextNode](#createTextNode)
+11. [SetAttribute](#setAttribute)
+12. [AppendChild](#appendChild)
+13. [InnerHTML](#innerHTML)
+14. [Map, Reduce, Filter e Find](#map-reduce-filter-find)
+15. [QuerySelector](#querySelector)
+16. [Length e Value](#Length)
+17. [Arrow Functions](#Arrow)
+18. [Axios](#Axios)
+19. [LocalStorage](#localStorage)
 
 <div id='Function'></div>
 
@@ -88,25 +91,51 @@ class Pessoas extends Pessoa{
         console.log(`Mora na cidade: ${this.cidade}`)
     }
 } 
-const joão = new Pessoa ('João', 29)
+const joao = new Pessoa ('João', 29)
 const pedro = new Pessoas ('Pedro', 49, 'Rio Grande')
 
-joão.sobre()
+joao.sobre()
 pedro.sobre_local()
 ```
 
 :arrow_forward: As famosas e amadas classes, pedimos tanto para vir e chegou com o ES6, vamos começar pelo o que é uma classe. </br>
-Classes nada mais é que um "uniforme" que as variaveis vão usar que tem algo em comum, um exemplo e que todas as pessoas são pessoas, então a pessoa esta dentro da classe Pessoa, eles tem caracteriscticas de nome, idade, ..., isso ajuda muito, pois, não precisamos repetir o codigo toda a vez, isso facilita muito.
+Classes nada mais é que um "uniforme" que as variáveis vão usar que tem algo em comum, um exemplo e que todas as pessoas são pessoas, então a pessoa esta dentro da classe Pessoa, eles têm características de nome, idade, ..., isso ajuda muito, pois, não precisamos repetir o código toda a vez, isso facilita muito.
 
-1. Vamos analizar as classes: </br>
+1. Vamos analisar as classes: </br>
 :small_orange_diamond: **class Pessoa{}** Define que é uma classe e o nome, super simples. </br>
-:small_orange_diamond: **constructor() {}** Chama o metodo construtor e nele deve passar o que quer que a classe use localmente, seja uma variavel ou algo do tipo, tem que estar atento que precisa **sempre** do `.this`. </br>
-:small_orange_diamond: **sobre() {}** Define um metodo com o **nome** e os *parametros*, como se fosse uma função normal. </br>
+:small_orange_diamond: **constructor() {}** Chama o método construtor e nele deve passar o que quer que a classe use localmente, seja uma variável ou algo do tipo, tem que estar atento que precisa **sempre** do `.this`. </br>
+:small_orange_diamond: **sobre() {}** Define um método com o **nome** e os *parametros*, como se fosse uma função normal. </br>
 1. Agora vamos analizar a classe com extensão de outra: </br>
 :small_orange_diamond: **class Pessoas extends Pessoa{}** A mesma coisa que uma classe normal, mas, com extensão de outra, todas os metodos, incluindo o construtor. </br>
-:small_orange_diamond: **super()** Deve ser sempre a primeira linha do construtor filho e serve para passar as informações para a classe pai, seja as variaveis no caso do `constructor` ou os metodos no caso do `super.sobre()` </br>
-3. Para instanciar uma classe, devemos criar uma `const` (**Recomendado**), `var` ou `let`, com o nome e em seguida `new NomeDaClasse`, depois e so chamar o elemento junto com o metodo, igual no `joão.sobre()` ou `pedro.sobre_local()` </br>
-4. Para acessar as informações dentro do metodo construtor, devemos colocar `this.***`, assim pode acessar as informações dentro do constructor.
+:small_orange_diamond: **super()** Deve ser sempre a primeira linha do construtor filho e serve para passar as informações para a classe pai, seja as variáveis no caso do `constructor` ou os métodos no caso do `super.sobre()` </br>
+1. Para instanciar uma classe, devemos criar uma `const` (**Recomendado**), `var` ou `let`, com o nome e em seguida `new NomeDaClasse`, depois e so chamar o elemento junto com o método, igual no `joão.sobre()` ou `pedro.sobre_local()` </br>
+2. Para acessar as informações dentro do método construtor, devemos colocar `this.***`, assim pode acessar as informações dentro do constructor.
+
+<div id='classe-estastica'></div>
+
+## :heavy_check_mark: Classe Estática
+### Original
+```javascript
+class *** {
+    static **(**) {
+        return ***
+    }
+}
+```
+
+### Exemplo
+```javascript
+class Matematica {
+    static soma(a, b){
+        return a + b
+    }
+}
+console.log(Matematica.soma(1,2))
+```
+
+:arrow_forward: As classes estáticas são parecidas com as classes normais, mas tem o diferencial de não usar um metodo construtor, ele é usado para uso básicos, como somas, multiplicações ou algo parecido. </br>
+1. Não tem muito o que explicar, segue o mesmo conceito das classes normais, um diferencial que as classes estáticas tem e que elas não precisam ser estanciadas, sendo possível chamar elas com o **NomeDaClasse** + *Metodo*, igual no exemplo `console.log`.
+
 
 <div id='If-else-e-else-if'></div>
 
@@ -229,6 +258,51 @@ Podemos mudar a *Propriedades*, mas **NÃO** os *Parâmetros* desta forma:
 Cafe.nome = “Cafe Brasileiro”
 ```
 
+<div id='objetos'></div>
+
+## :heavy_check_mark: Objetos
+### Original
+```javascript
+const *** {
+    *** = ***,
+    *** = ***,
+    *** = ***
+}
+```
+
+### Exemplo
+```javascript
+const Pessoa1 {
+    nome: 'Gabriel',
+    idade: 19,
+    cidade_nasceu: 'Rio Grande'
+}
+console.log(Pessoa1)
+
+Pessoa1.nome: 'Pedro'
+console.log(Pessoa1)
+
+const Pessoa2 = {...Pessoa1, nome: 'Cleber'}
+console.log(Pessoa2)
+```
+
+Os amados objetos estão aqui, eles são muito usados para armazenar dados, criar tipos, ..., tem uma facilidade de usar e criar e armazena string, números, entre outros. </br>
+1. Vamos ver a estrutura do Objeto: </br>
+:small_orange_diamond: **const Pessoa1 {}** Declaramos uma constante com o nome "Pessoa1" e mesmo sendo uma constante, podemos mudar os atributos que este objeto contém, mas não as propriedades. </br>
+:small_orange_diamond: **nome = 'Gabriel'...** Entre outros atributos e propriedades dentro deste objeto, apenas colocamos o nome da propriedade e o atributo. </br>
+2. Para mudar algum atributo, devemos colocar **Nome do Objeto** + *Propriedade*, igual no exemplo `Pessoa1.nome` e então passar o novo atributo. </br>
+3. Para criar um novo objeto com as mesmas caracteristicas, mas com algum atributo diferente, devemos fazer igual no exemplo do Pessoa2, passando dentro de chaves, o ...**objeto** + *Propriedade* e então passamos o atributo.</br>
+4. Se tivermos o exemplo a seguir, podemos passar diretamente a propriedade como variável, assim o nome da propriedade vai ser igual da variável:
+```javascript
+var nome = 'Gabriel'
+var idade = 19
+
+const Pessoa {
+    nome,
+    idade
+}
+```
+
 <div id='createElement'></div>
 
 ## :heavy_check_mark: createElement (Elemento)
@@ -305,6 +379,40 @@ aElemento.innerHTML('Prefiro cafe') ou (')
 
 :arrow_forward: Serve para escrever com e sobre o html, ou seja, se você quiser, pode escrever todo o código html com este método, é mais utilizado para apagar o conteúdo do html.
 
+<div id='map-reduce-filter-find'></div>
+
+## :heavy_check_mark: *Elemento*.map / .reduce / .filter / .find
+### Original
+```javascript
+***.map((item, index) => item + index)
+***.reduce((total, next) => total + next)
+***.filter(item => item % 2 === 0)
+***.find(item => item === ElementoProcurar)
+```
+
+### Exemplo
+```javascript
+let numeros = [1, 2, 5, 7, 10]
+
+let mapear = numeros.map((numero, index) => numero * index)
+let reduzir = numeros.reduce((total, prox) => total + prox)
+let filtrar = numeros.filter(numero => numero % 2 === 0)
+let procurar = numeros.find(numero => numero === 5)
+
+console.log(`Array com os numeros * index: ${mapear}`)
+console.log(`Reduzindo os numeros em uma unica variavel do Array: ${reduzir}`)
+console.log(`Array com os numeros filtrados de um Array: ${filtrar}`)
+console.log(`Procurando um numero no Array: ${procurar}`)
+```
+
+:arrow_forward: Aqui temos algumas maneiras de mapear, reduzir, filtrar e procurar elementos dentro de um array, são simples e facilita o trabalho. </br>
+1. Vamos analisar eles:</br>
+:small_orange_diamond: **.map** Ele mapeia um array e pode trazer algumas funcionalidades como pedir a raiz quadrada com o `numeros.map(Math.sqrt)`ou atribuir algo no array novo, como no exemplo, que multiplica o número pelo index. </br>
+Quando queremos um array novo com alguma atribuição, devemos chamar uma Arrow Function `=>` passando algum elemento, como no exemplo, que passamos o número e o index.</br>
+:small_orange_diamond: **.reduce** Vai reduzir todos os números em um e colocar dentro de uma variavel, no exemplo, pegamos o total e o próximo número e somamos os dois, isso vamos passar como parâmetro para uma arrow function. </br>
+:small_orange_diamond: **.filter** Filtra os números e coloca dentro de um array, devemos passar uma propriedade para o filtro, para que ele saiba o que filtrar, claro, também dentro de uma arrow function.</br>
+:small_orange_diamond: **.find** Nada mais é que procurar algo dentro de um array, se achar ele retorna o próprio número se não, ele da uma mensagem de erro, devemos também passar uma propriedade para ele saber o que procurar.
+
 <div id='querySelector'></div>
 
 ## :heavy_check_mark: document.querySelector(``)
@@ -345,7 +453,7 @@ console.log(nota.value)
 
 :arrow_forward: Vamos por partes: </br>
 :small_orange_diamond: **length** Serve para retornar o tamanho de algo, seja dos caracteres de uma frase ou o tamanho de uma lista ou algo do tipo. </br>
-:small_orange_diamond: **value** Retorna um `Number` em vez de uma string, isto é útil quando queremos o conteúdo de um `<input>` ou algo assim, ele invés de retornar uma `string` contendo o numero, com o **value**, ele retorna o valor de dentro desta `string`.
+:small_orange_diamond: **value** Retorna um `Number` em vez de uma string, isto é útil quando queremos o conteúdo de um `<input>` ou algo assim, ele invés de retornar uma `string` contendo o número, com o **value**, ele retorna o valor de dentro desta `string`.
 
 <div id='Arrow'></div>
 
@@ -442,10 +550,10 @@ JSON.parse(localStorage.getItem('lista_storage')) || []
 
 1. Vamos explicar os dois comandos:</br>
 :small_orange_diamond: **.setItem** Pega as informações que esta dentro dos parenteses e envia para dentro deste banco de dados, detalhe, tem que ser um **JSON**. </br>
-Dentro temos o primeiro *parametro* `'***'`, que e o nome deste banco de dados, e em seguida o objeto, lista... que queremos enviar.</br>
+Dentro temos o primeiro *parametro* `'***'`, que e o nome deste banco de dados, e em seguida o objeto, Array... que queremos enviar.</br>
 :small_orange_diamond: **getItem** Ele pega o que esta dentro do banco de dados e coloca dentro de um Objeto, detalhe, ele tem que ser convetido para **Objeto**. </br>
 Dentro temos apenas um *parametro* que é o nome do banco de dados que queremos pegar as informações.</br>
 2. O JS oferece dois tipos de conversão, de JSON para Objeto e Objeto para JSON, são elas:</br>
-:small_orange_diamond: **JSON.stringify()** Que converte um objeto, lista... em um JSON.</br>
+:small_orange_diamond: **JSON.stringify()** Que converte um objeto, Array... em um JSON.</br>
 :small_orange_diamond: **JSON.parse()** Ele converte um JSON em um objeto.</br>
 
