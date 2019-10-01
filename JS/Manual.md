@@ -99,7 +99,7 @@ pedro.sobre_local()
 ```
 
 :arrow_forward: As famosas e amadas classes, pedimos tanto para vir e chegou com o ES6, vamos começar pelo o que é uma classe. </br>
-Classes nada mais é que um "uniforme" que as variáveis vão usar que tem algo em comum, um exemplo e que todas as pessoas são pessoas, então a pessoa esta dentro da classe Pessoa, eles têm características de nome, idade, ..., isso ajuda muito, pois, não precisamos repetir o código toda a vez, isso facilita muito.
+Classes nada mais é que um "uniforme" que as variáveis vão usar que tem algo em comum, um exemplo e que todos os humanos são pessoas, então o humano esta dentro da classe Pessoas, eles têm características de nome, idade, sexo, ..., isso ajuda muito, pois, não precisamos repetir o código toda a vez, isso facilita muito.
 
 1. Vamos analisar as classes: </br>
 :small_orange_diamond: **class Pessoa{}** Define que é uma classe e o nome, super simples. </br>
@@ -134,7 +134,7 @@ console.log(Matematica.soma(1,2))
 ```
 
 :arrow_forward: As classes estáticas são parecidas com as classes normais, mas tem o diferencial de não usar um metodo construtor, ele é usado para uso básicos, como somas, multiplicações ou algo parecido. </br>
-1. Não tem muito o que explicar, segue o mesmo conceito das classes normais, um diferencial que as classes estáticas tem e que elas não precisam ser estanciadas, sendo possível chamar elas com o **NomeDaClasse** + *Metodo*, igual no exemplo `console.log`.
+1. Não tem muito o que explicar, segue o mesmo conceito das classes normais, um diferencial que as classes estáticas tem e que elas não precisam ser estanciadas, sendo possível chamar elas com o **NomeDaClasse** + *Metodo*, igual no exemplo `Matematica.soma()`.
 
 
 <div id='If-else-e-else-if'></div>
