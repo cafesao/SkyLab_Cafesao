@@ -1,0 +1,8 @@
+{
+  "name": "apicorreios",
+  "version": "1.0.0",
+  "description": "Informa o CEP e retorna o endereço",
+  "main": "index.js",
+  "author": "Cafesão",
+  "license": "MIT"
+}
