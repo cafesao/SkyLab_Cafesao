@@ -6,6 +6,7 @@
   - [Inicando Projeto](#inicando-projeto)
   - [Instalando e configurando o Babel](#instalando-e-configurando-o-babel)
   - [Adicionando o Webpack](#adicionando-o-webpack)
+  - [Adicionando Axios](#adicionando-axios)
 
 <div id='começando'></div>
 
@@ -106,3 +107,17 @@ Depois modifique o *package.json* colocando o seguinte:
 ```
 Com isso você ira colocar no terminal a mesma coisa `yarn dev` mas ele ira analizar os arquivos *.js* e converter para que o browser entenda, simples assim.
 Fora que ele criara um server local, que atualiza conforme atualizamos os arquivos, o que facilita muito.
+
+## Adicionando Axios
+
+Para adicionar o axios devemos colocar no terminal:
+```
+yarn add axios
+```
+
+E então importar para dentro do *.js* colocando:
+```
+import axios from 'axios'
+```
+
+E é isso, super simples.
