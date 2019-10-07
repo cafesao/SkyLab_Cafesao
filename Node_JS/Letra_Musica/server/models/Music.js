@@ -20,6 +20,10 @@ const MusicSchema = new mongo.Schema({
     registro: {
         type: Date,
         default: Date.now
+    },
+    tags : {
+        type: Array,
+        required: true
     }
 })
 

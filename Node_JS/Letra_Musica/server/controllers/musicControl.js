@@ -1,5 +1,6 @@
 const mongo = require('mongoose')
 const Music = mongo.model('Music')
+const express = require('express')
 
 module.exports  = {
     async coletarTudo(req,res) {
@@ -8,8 +9,9 @@ module.exports  = {
     },
 
     async coletar(req,res) {
-        const musicas = await Music.find(req.params.nomeMusica, req.params.nomeArtista)
-        return res.json(musicas)
+        const nomeMusica = req.params.nomeMusica.toUpperCase().split(' ')
+        const musica = await Music.find({"tags": { $all: nomeMusica }})
+        return res.json(musica)
     },
 
     async adicionar(req,res) {
@@ -19,5 +21,6 @@ module.exports  = {
 
     async deletar(req,res) {
         await Music.findByIdAndRemove(req.params.id)
+        return res.send()
     }
 }
