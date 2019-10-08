@@ -7,7 +7,6 @@ var botao = document.querySelector('button#pesquisar')
 botao.addEventListener("click", Pesquisar)
 
 function Pesquisar (){
-    console.log(nomeMusica.value)
     apagarResultado(divResultado)
     procurarMusica(divResultado, nomeMusica.value)
 }

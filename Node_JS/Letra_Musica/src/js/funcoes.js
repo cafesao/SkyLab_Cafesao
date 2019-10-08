@@ -2,13 +2,12 @@ import axios from 'axios'
 export {procurarMusica, apagarResultado}
 const musica = {}
 
-async function procurarMusica (div, musica) {
+async function procurarMusica (div, musicaUser) {
     try{
         carregando(true,div)
 
-        const musicaAxios = await axios.get(`http://localhost:27017/api/dados/${musica}`)
-        const { nomeMusica, nomeArtista, lancamento, letra } = musicaAxios
-
+        const musicaAxios = await axios.get(`http://localhost:3001/api/dados/${musicaUser}`)
+        const { nomeMusica, nomeArtista, lancamento, letra } = musicaAxios.data[0]
         musica.Musica = nomeMusica
         musica.Artista = nomeArtista
         musica.Lançamento = lancamento
@@ -43,28 +42,53 @@ function carregando(carregando = true,div) {
 }
 
 function adicionarResultado(div) {
+
+    //Titulos
+    let tituloMusicaElemento = document.createElement('h2')
+    let tituloArtistaElemento = document.createElement('h2')
+    let tituloLançamentoElemento = document.createElement('h2')    
+    let tituloLetraElemento = document.createElement('h2')
+    //Textos
     let musicaElemento = document.createElement('p')
     let artistaElemento = document.createElement('p')
     let lançamentoElemento = document.createElement('p')
-    let letraElemento = document.createElement('p')
+    let letraElemento = document.createElement('pre')
     
-    let musicaTexto = document.createTextNode(`Nome da Musica: ${musica.Musica}`)
-    let artistaTexto = document.createTextNode(`Nome do Artista: ${musica.Artista}`)
-    let lançamentoTexto = document.createTextNode(`Ano de Lançamento: ${musica.Lançamento}`)
-    let letraTexto = document.createTextNode(`Letra: ${musica.Letra}`)
+    //Titulos
+    let tituloMusicaTexto = document.createTextNode('Musica')
+    let tituloArtistaTexto = document.createTextNode('Artista')
+    let tituloLançamentoTexto = document.createTextNode('Lançamento')
+    let tituloLetraTexto = document.createTextNode('Letra')
+    //Textos
+    let musicaTexto = document.createTextNode(musica.Musica)
+    let artistaTexto = document.createTextNode(musica.Artista)
+    let lançamentoTexto = document.createTextNode(musica.Lançamento)
+    let letraTexto = document.createTextNode(musica.Letra)
 
+    //Titulos
+    tituloMusicaElemento.appendChild(tituloMusicaTexto)
+    tituloArtistaElemento.appendChild(tituloArtistaTexto)
+    tituloLançamentoElemento.appendChild(tituloLançamentoTexto)    
+    tituloLetraElemento.appendChild(tituloLetraTexto)
+    //Textos
     musicaElemento.appendChild(musicaTexto)
     artistaElemento.appendChild(artistaTexto)
     lançamentoElemento.appendChild(lançamentoTexto)
     letraElemento.appendChild(letraTexto)   
     
-    div.appendChild(musicaElemento)    
+    div.appendChild(tituloMusicaElemento) 
+    div.appendChild(musicaElemento)  
+
+    div.appendChild(tituloArtistaElemento)
     div.appendChild(artistaElemento)
-    div.appendChild(lançamentoElemento)
-    div.appendChild(letraElemento)    
+
+    div.appendChild(tituloLançamentoElemento) 
+    div.appendChild(lançamentoElemento) 
+
+    div.appendChild(tituloLetraElemento)
+    div.appendChild(letraElemento)  
 }
 
 function apagarResultado(div) {
     div.innerHTML = ''
 }
-
