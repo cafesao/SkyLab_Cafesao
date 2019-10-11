@@ -6,6 +6,5 @@ routes.get('/dados', musicControl.coletarTudo)
 routes.get('/dados/:nomeMusica', musicControl.coletar)
 routes.post('/dados', musicControl.adicionar)
 routes.delete('/dados/:id', musicControl.deletar)
-routes.options('/dados', () => {return})
 
 module.exports = routes

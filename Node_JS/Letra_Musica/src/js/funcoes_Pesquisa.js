@@ -1,5 +1,5 @@
 import axios from 'axios'
-export {procurarMusica, apagarResultado}
+export { procurarMusica, apagarResultadoDiv, apagarResultadoInput }
 const musica = {}
 
 async function procurarMusica (div, musicaUser) {
@@ -12,6 +12,8 @@ async function procurarMusica (div, musicaUser) {
         musica.Artista = nomeArtista
         musica.Lançamento = lancamento
         musica.Letra = letra
+
+        
 
         carregando(false,div)
         if (musica.Musica == '') {
@@ -89,6 +91,10 @@ function adicionarResultado(div) {
     div.appendChild(letraElemento)  
 }
 
-function apagarResultado(div) {
+function apagarResultadoDiv(div) {
     div.innerHTML = ''
+}
+
+function apagarResultadoInput(nomeMusica) {
+    nomeMusica.value = ''
 }

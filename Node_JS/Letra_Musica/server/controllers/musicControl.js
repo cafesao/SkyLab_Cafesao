@@ -1,6 +1,5 @@
 const mongo = require('mongoose')
 const Music = mongo.model('Music')
-const express = require('express')
 
 module.exports  = {
     async coletarTudo(req,res) {
