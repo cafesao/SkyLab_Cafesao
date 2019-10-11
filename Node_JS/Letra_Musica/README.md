@@ -1,1 +1,0 @@
-NÃO ENVIA REQ AINDA!  Não funciona, em produção!!
